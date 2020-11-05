@@ -1,5 +1,5 @@
 ProjectTeam10b
-PROJECT TITLE: Tody's Adventure 
+PROJECT TITLE: The JourNey of the Professeur Cat  
 PURPOSE OF PROJECT: Team Project
 VERSION or DATE: 11/5/2020
 HOW TO START THIS PROJECT:
