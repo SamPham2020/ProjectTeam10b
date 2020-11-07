@@ -26,5 +26,13 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+        Cat cat = new Cat();
+        addObject(cat,56,345);
+        Cat cat2 = new Cat();
+        addObject(cat2,95,199);
+        cat.setLocation(162,377);
+        cat.setLocation(146,387);
+        removeObject(cat);
+        cat2.setLocation(53,336);
     }
 }
