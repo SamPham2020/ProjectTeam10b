@@ -10,3 +10,7 @@ VERSION or DATE:
 HOW TO START THIS PROJECT:
 AUTHORS:
 USER INSTRUCTIONS:
+# Change log: 
+v1.0 (11/06/2020):
+-add image to image folders and change world's size and image
+
