@@ -1,1 +1,7 @@
 Please write your sources(where you found the pics or sounds) since teacher has mentioned it in class: 
+Pics: 
+1) Dogs' and Cats' sprites: 
+Link: https://www.gameart2d.com/cat-and-dog-free-sprites.html
+Lisence: Creative Common Zero (CC0) a.k.a Public Domain license
+Link: https://www.gameart2d.com/license.html
+2) train, train2, train: made by Hong Hien Pham using Paint 3D 
