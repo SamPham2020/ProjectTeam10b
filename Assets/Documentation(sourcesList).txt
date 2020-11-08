@@ -3,10 +3,10 @@ Pics:
 1) Dogs' and Cats' sprites: 
 Link: https://www.gameart2d.com/cat-and-dog-free-sprites.html
 Lisence: Creative Common Zero (CC0) a.k.a Public Domain license
-Link: https://www.gameart2d.com/license.html
-2) train, train2, train: made by Hong Hien Pham using Paint 3D 
-
-
-
+License Link: https://www.gameart2d.com/license.html
+2)Tree Branch
+Link: https://craftpix.net/freebies/free-jump-game-items/
+License Link: https://craftpix.net/file-licenses/
+3) train, train2, train: made by Hong Hien Pham using Paint 3D 
 
 Sounds:
