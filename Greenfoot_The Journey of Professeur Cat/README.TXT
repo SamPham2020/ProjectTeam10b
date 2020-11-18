@@ -11,4 +11,4 @@ HOW TO START THIS PROJECT:
 AUTHORS: Shawn Gregory, Astour Krikor, Hong Hien Pham
 1.0: add world and add 1 cat (testing)
 1.1: short version of the game to test the mechanics 
-
+1.2: add loselife and endgame functions to the short version of the game 
