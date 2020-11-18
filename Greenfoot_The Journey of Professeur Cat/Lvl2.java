@@ -17,6 +17,7 @@ public class Lvl2 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1410, 670, 1); 
+        prepare();
     }
 
     public void act() {
@@ -25,4 +26,16 @@ public class Lvl2 extends World
         if (Greenfoot.isKeyDown("m"))
             Greenfoot.setWorld(new AMainMenu());            
     }    
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Entrance2 entrance2 = new Entrance2();
+        addObject(entrance2,1352,53);       
+        TemporaryCatForLvlTransition tenporaryCatForLvl = new TemporaryCatForLvlTransition();
+        addObject(tenporaryCatForLvl,49,41);
+    }
 }

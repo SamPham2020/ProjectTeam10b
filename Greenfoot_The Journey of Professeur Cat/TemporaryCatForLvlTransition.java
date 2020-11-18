@@ -1,41 +1,49 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
-* Write a description of class Cat here.
+* Write a description of class TemporaryCatForLvlTransition here.
 * 
 * @author (your name) 
 * @version (a version number or a date)
 */
-public class Cat extends Actor
+public class TemporaryCatForLvlTransition extends Actor
 {
-    private boolean isDown;
-    public int speed = 4;
-    private int counter = 0;
-    private int iCorrectForKey = 0;
-    private GreenfootImage stand = null;
-    private GreenfootImage run1 = null;
-    private GreenfootImage run2 = null;
-    
-    public Cat() {
-        stand = new GreenfootImage("Stand1.png");    
-        run1 = new GreenfootImage("Run1.png");
-        run2 = new GreenfootImage("Run2.png");
-        setImage(stand);
-        isDown = false; 
+private boolean isDown;
+public int speed = 4;
+private int counter = 0;
+private int iCorrectForKey = 0;
+private GreenfootImage stand = null;
+private GreenfootImage run1 = null;
+private GreenfootImage run2 = null;
+
+public TemporaryCatForLvlTransition() {
+    stand = new GreenfootImage("Stand1.png");    
+    run1 = new GreenfootImage("Run1.png");
+    run2 = new GreenfootImage("Run2.png");
+    setImage(stand);
+    isDown = false; 
+}
+
+/**
+ * Act - do whatever the TemporaryCatForLvlTransition wants to do. This method is called whenever
+ * the 'Act' or 'Run' button gets pressed in the environment.
+ */
+public void act() 
+{
+    // Add your action code here.
+    movement();
+    if (isMove()) {           
+        switchImage();
     }
+    else
+        setImage(stand); 
     
-    /**
-     * Act - do whatever the Cat wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-        movement();
-        if (isMove()) {           
-            switchImage();
-        }
-        else
-            setImage(stand);    
+        if (isTouching(Entrance1.class))
+            Greenfoot.setWorld(new Lvl2());    
+        if (isTouching(Entrance2.class))
+            Greenfoot.setWorld(new Lvl3());
+        if (isTouching(House.class))
+            Greenfoot.setWorld(new Over());    
+        
         if (isTouching(Car.class) && getX() > 560 || isTouching(Train.class) && getX() > 1000) {
             getWorld().setPaintOrder(Bridge.class, Car.class, Flag.class, Train.class);
             stand = new GreenfootImage("squishedCat4.png");
@@ -44,7 +52,7 @@ public class Cat extends Actor
         if (isTouching(River.class) && getX() > 189 && getX() < 320) {
             if (isTouching(Rock.class) && speed != 0) {
                 setLocation(getX(), getY() + 3);
-                getWorld().setPaintOrder(Cat.class);
+                getWorld().setPaintOrder(TemporaryCatForLvlTransition.class);
             }
             else
             {               
@@ -61,9 +69,10 @@ public class Cat extends Actor
             iCorrectForKey++;
         }
         if (isTouching(House.class)) {           
-            getWorld().showText("Congratz! You have finished the sample lv3.", 700, 330); 
+            getWorld().showText("Congratz! You have finished the sample lv3.\n Press enter to go to final scene ", 700, 330); 
             speed = 0;
-            Greenfoot.setWorld(new Over());                
+            if (Greenfoot.isKeyDown("enter"))
+                Greenfoot.setWorld(new Over());                
         }
         if (speed == 0 &&  !isTouching(House.class)){  
             if (counter == 50) {

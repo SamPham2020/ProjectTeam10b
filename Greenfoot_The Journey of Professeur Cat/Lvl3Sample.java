@@ -49,14 +49,9 @@ public class Lvl3Sample extends World
     
     public void addKey(int keys) { 
         keyNum += keys;   
-        showKeyNum();
         if (keyNum == 0)
             addObject(new House(), 1350, 50);
     }  
-    
-    public void showKeyNum() {
-        showText("Key(s) Left: " + keyNum, 100, 100);
-    }
     
     public void loseLife(int life) {        
         if (lifeNum > 0) {
