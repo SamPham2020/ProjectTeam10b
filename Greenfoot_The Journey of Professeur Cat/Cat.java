@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
 * Write a description of class Cat here.
 * 
@@ -9,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cat extends Actor
 {
     private boolean isDown;
-    private int speed = 4;
+    public int speed = 4;
     private int counter = 0;
-    private int gravity = 0;
+    private int iCorrectForKey = 0;
     private GreenfootImage stand = null;
     private GreenfootImage run1 = null;
     private GreenfootImage run2 = null;
@@ -51,20 +50,32 @@ public class Cat extends Actor
             {               
                 stand = new GreenfootImage("graycatdrowed2.png");
                 getWorld().setPaintOrder(Branch.class, Rock.class);
-                speed = 0;
+                speed = 0;                
             }
         }
         if (isTouching(Key.class)) {
             removeTouching(Key.class);
-            Lvl3Sample myworld = (Lvl3Sample)getWorld();
-            myworld.addKey(-1);         
+            Lvl3Sample myworld = (Lvl3Sample) getWorld();
+            myworld.addKey(-1);  
+            myworld.addObject(new Correct(), 1390, 130 + iCorrectForKey * 40);
+            iCorrectForKey++;
         }
         if (isTouching(House.class)) {           
-            getWorld().showText("Congratz! You have finished the sample lvl.\n Press enter to go to lvl1 ", 700, 330); 
+            getWorld().showText("Congratz! You have finished the sample lv3.\n Press enter to go to final scene ", 700, 330); 
             speed = 0;
             if (Greenfoot.isKeyDown("enter"))
-                Greenfoot.setWorld(new Lvl1());                
-        }      
+                Greenfoot.setWorld(new Over());                
+        }
+        if (speed == 0 &&  !isTouching(House.class)){  
+            if (counter == 50) {
+                Lvl3Sample myworld = (Lvl3Sample)getWorld();
+                myworld.loseLife(1);
+                getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
+                getWorld().removeObject(this);   
+            }
+            else
+                counter++;
+        }
     }  
         
     /**

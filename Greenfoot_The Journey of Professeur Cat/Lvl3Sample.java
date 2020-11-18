@@ -10,6 +10,7 @@ public class Lvl3Sample extends World
 {
     private int counter = 0;
     private int keyNum = 3;
+    private int lifeNum = 3;
     /**
      * Constructor for objects of class Lvl3Sample.
      * 
@@ -51,11 +52,22 @@ public class Lvl3Sample extends World
         showKeyNum();
         if (keyNum == 0)
             addObject(new House(), 1350, 50);
-    }
+    }  
     
     public void showKeyNum() {
         showText("Key(s) Left: " + keyNum, 100, 100);
     }
+    
+    public void loseLife(int life) {        
+        if (lifeNum > 0) {
+            lifeNum -= life;           
+        }
+        if (lifeNum > 0) {
+            addObject(new Cat(), 53,353); 
+        }
+        if (lifeNum < 1) 
+            showText("Game Over\nPress m to return to the main menu", 705, 335);  
+    }     
     
     /**
      * Prepare the world for the start of the program.
@@ -80,8 +92,13 @@ public class Lvl3Sample extends World
         for (int i = 0; i < 3; i++) {
             addObject(new Key(), Greenfoot.getRandomNumber(500) + 450, Greenfoot.getRandomNumber(600) + 50);   
         }        
-        House house = new House();
-        addObject(house,70,245);
-        removeObject(house);
+        Bar bar = new Bar();
+        addObject(bar,1390,259);
+        Heart heart = new Heart();
+        addObject(heart,1390,373);
+        Heart heart2 = new Heart();
+        addObject(heart2,1390,330);
+        Heart heart3 = new Heart();
+        addObject(heart3,1390,288);
     }
 }
