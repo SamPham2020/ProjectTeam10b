@@ -16,6 +16,13 @@ public class Lvl2 extends World
     public Lvl2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1410, 670, 1); 
     }
+
+    public void act() {
+        if (Greenfoot.isKeyDown("i"))
+            Greenfoot.setWorld(new InstructionPage());        
+        if (Greenfoot.isKeyDown("m"))
+            Greenfoot.setWorld(new AMainMenu());            
+    }    
 }

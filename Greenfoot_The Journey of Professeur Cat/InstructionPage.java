@@ -1,27 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lvl1 here.
+ * Write a description of class InstructionPage here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lvl1 extends World
+public class InstructionPage extends World
 {
 
     /**
-     * Constructor for objects of class Lvl1.
+     * Constructor for objects of class InstructionPage.
      * 
      */
-    public Lvl1()
+    public InstructionPage()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1410, 672, 1); 
+        super(1410, 670, 1); 
     }
     
     public void act() {
-        if (Greenfoot.isKeyDown("i"))
-            Greenfoot.setWorld(new InstructionPage());        
+        if (Greenfoot.isKeyDown("enter"))
+            Greenfoot.setWorld(new Lvl1());        
         if (Greenfoot.isKeyDown("m"))
             Greenfoot.setWorld(new AMainMenu());            
     }

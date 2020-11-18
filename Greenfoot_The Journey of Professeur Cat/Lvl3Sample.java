@@ -1,28 +1,32 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class Lvl3Sample here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class Lvl3Sample extends World
 {
     private int counter = 0;
     private int keyNum = 3;
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class Lvl3Sample.
      * 
      */
-    public MyWorld()
+    public Lvl3Sample()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1416, 672, 1); 
+        super(1410, 670, 1); 
         prepare();
     }
-   
+    
     public void act() {
         setPaintOrder(Branch.class, Bridge.class, Flag.class, Cat.class);
+        if (Greenfoot.isKeyDown("i"))
+            Greenfoot.setWorld(new InstructionPage());        
+        if (Greenfoot.isKeyDown("m"))
+            Greenfoot.setWorld(new AMainMenu());           
         if (counter == 7) {
             if (Greenfoot.getRandomNumber(100) < 3) 
                 addObject(new Car(), 583, 672);

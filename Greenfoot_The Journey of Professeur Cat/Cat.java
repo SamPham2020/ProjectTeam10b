@@ -15,8 +15,6 @@ public class Cat extends Actor
     private GreenfootImage stand = null;
     private GreenfootImage run1 = null;
     private GreenfootImage run2 = null;
-    public int lvl = 0; 
-    int plus = 1;
     
     public Cat() {
         stand = new GreenfootImage("Stand1.png");    
@@ -58,7 +56,7 @@ public class Cat extends Actor
         }
         if (isTouching(Key.class)) {
             removeTouching(Key.class);
-            MyWorld myworld = (MyWorld)getWorld();
+            Lvl3Sample myworld = (Lvl3Sample)getWorld();
             myworld.addKey(-1);         
         }
         if (isTouching(House.class)) {           
