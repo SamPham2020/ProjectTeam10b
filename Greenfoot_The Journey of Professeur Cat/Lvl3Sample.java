@@ -27,7 +27,9 @@ public class Lvl3Sample extends World
         if (Greenfoot.isKeyDown("i"))
             Greenfoot.setWorld(new InstructionPage());        
         if (Greenfoot.isKeyDown("m"))
-            Greenfoot.setWorld(new AMainMenu());           
+            Greenfoot.setWorld(new AMainMenu());      
+        if (Greenfoot.isKeyDown("r"))
+            Greenfoot.setWorld(new Lvl3Sample());        
         if (counter == 7) {
             if (Greenfoot.getRandomNumber(100) < 3) 
                 addObject(new Car(), 583, 672);
