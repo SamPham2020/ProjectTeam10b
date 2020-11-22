@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AMainMenu extends World
 {
+    public static int lifeNum = 3;
     /**
      * Constructor for objects of class AMainMenu.
      * 
@@ -25,5 +26,8 @@ public class AMainMenu extends World
             Greenfoot.setWorld(new InstructionPage());
         if (Greenfoot.isKeyDown("c"))
             Greenfoot.setWorld(new Credit());            
+    }
+    public static int getLife() {
+        return lifeNum;
     }
 }

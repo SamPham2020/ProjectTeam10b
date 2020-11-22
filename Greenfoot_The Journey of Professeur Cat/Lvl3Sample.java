@@ -10,7 +10,8 @@ public class Lvl3Sample extends World
 {
     private int counter = 0;
     private int keyNum = 3;
-    private int lifeNum = 3;
+    //public int lifeNum = 3;
+    private int lifeNum = AMainMenu.lifeNum;
     /**
      * Constructor for objects of class Lvl3Sample.
      * 
