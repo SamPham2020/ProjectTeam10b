@@ -42,9 +42,9 @@ public class Cat2 extends Actor
         }   
         if (isTouching(Star.class)) {
             removeTouching(Star.class);
-            Lvl2 myworld = (Lvl2) getWorld();
+            MutualWorld myworld = (MutualWorld) getWorld();
             myworld.addStar(-1);  
-            myworld.addObject(new Correct(), 1380, 230 + iCorrectForKey * 40);
+            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
             iCorrectForKey++;
         }
         if (isTouching(Entrance2.class)) {           

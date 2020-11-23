@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
-* Write a description of class TemporaryCatForLvlTransition here.
+* Write a description of class Cat1Temp here.
 * 
 * @author (your name) 
 * @version (a version number or a date)
 */
-public class TemporaryCatForLvlTransition extends Actor
+public class Cat1Temp extends Actor
 {
     private boolean isDown;
     public int speed = 4;
@@ -15,7 +15,7 @@ public class TemporaryCatForLvlTransition extends Actor
     private GreenfootImage run1 = null;
     private GreenfootImage run2 = null;
     
-    public TemporaryCatForLvlTransition() {
+    public Cat1Temp() {
         stand = new GreenfootImage("Stand1.png");    
         run1 = new GreenfootImage("Run1.png");
         run2 = new GreenfootImage("Run2.png");
@@ -24,68 +24,76 @@ public class TemporaryCatForLvlTransition extends Actor
     }
     
     /**
-     * Act - do whatever the TemporaryCatForLvlTransition wants to do. This method is called whenever
+     * Act - do whatever the Cat1Temp wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
         movement();
         if (isMove()) {           
             switchImage();
         }
         else
-            setImage(stand); 
-    
-        if (isTouching(Entrance1.class))
-            Greenfoot.setWorld(new Lvl2());    
+            setImage(stand);    
         if (isTouching(Entrance2.class))
-            Greenfoot.setWorld(new Lvl3());
-        if (isTouching(House.class))
-            Greenfoot.setWorld(new Over());    
-        
-        if (isTouching(Car.class) && getX() > 560 || isTouching(Train.class) && getX() > 1000) {
+            Greenfoot.setWorld(new Lvl3()); 
+        encounter();         
+    }  
+    
+    /**
+     * Interaction between cat and other objects and the consequences 
+     */
+    public void encounter() {
+        MutualWorld myworld = (MutualWorld) getWorld();  
+        //if touch train or car 
+        if (isTouching(Car.class) || isTouching(Train.class)) {
             getWorld().setPaintOrder(Bridge.class, Car.class, Flag.class, Train.class);
+            myworld.squish();
             stand = new GreenfootImage("squishedCat4.png");
             speed = 0;
         }   
-        if (isTouching(River.class) && getX() > 189 && getX() < 320) {
+        
+        // if touch river
+        if (isTouching(River.class) && getX() > 1320 && getX() < 1390 
+            || isTouching(BigRiver.class) && getX() > 500 && getX() < 605) {
             if (isTouching(Rock.class) && speed != 0) {
                 setLocation(getX(), getY() + 3);
-                getWorld().setPaintOrder(TemporaryCatForLvlTransition.class);
+                getWorld().setPaintOrder(Cat1Temp.class);
             }
             else
             {               
                 stand = new GreenfootImage("graycatdrowed2.png");
+                myworld.drowned();
                 getWorld().setPaintOrder(Branch.class, Rock.class);
                 speed = 0;                
             }
-        }
+        }     
+        // if touch key
         if (isTouching(Key.class)) {
             removeTouching(Key.class);
-            Lvl3Sample myworld = (Lvl3Sample) getWorld();
             myworld.addKey(-1);  
-            myworld.addObject(new Correct(), 1390, 130 + iCorrectForKey * 40);
+            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
             iCorrectForKey++;
         }
+        // if touch house 
         if (isTouching(House.class)) {           
-            getWorld().showText("Congratz! You have finished the sample lv3.\n Press enter to go to final scene ", 700, 330); 
+            getWorld().showText("Congratz! You have finished the sample lv3.", 700, 330); 
             speed = 0;
-            if (Greenfoot.isKeyDown("enter"))
-                Greenfoot.setWorld(new Over());                
+            Greenfoot.setWorld(new Over());    
+            myworld.win();
         }
+        // if lose life 
         if (speed == 0 &&  !isTouching(House.class)){  
-            if (counter == 50) {
-                Lvl3Sample myworld = (Lvl3Sample)getWorld();
+            if (counter == 25) {                
                 myworld.loseLife(1);
-                getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
+                myworld.removeObject(myworld.getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this);   
             }
             else
                 counter++;
-        }
-    }  
-        
+        }   
+    }
+    
     /**
      * Verify if the character is moving    
      */

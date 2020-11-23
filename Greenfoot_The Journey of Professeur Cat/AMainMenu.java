@@ -21,7 +21,7 @@ public class AMainMenu extends World
         
     public void act() {
         if (Greenfoot.isKeyDown("enter"))
-            Greenfoot.setWorld(new Lvl1());        
+            Greenfoot.setWorld(new Lvl1Temp());        
         if (Greenfoot.isKeyDown("i"))
             Greenfoot.setWorld(new InstructionPage());
         if (Greenfoot.isKeyDown("c"))
