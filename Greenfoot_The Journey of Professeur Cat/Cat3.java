@@ -35,40 +35,17 @@ public class Cat3 extends Actor
         }
         else
             setImage(stand);    
-        encounter();
+        encounter();      
     }  
     
     /**
      * Interaction between cat and other objects and the consequences 
      */
     public void encounter() {
-        MutualWorld myworld = (MutualWorld) getWorld();
-        if (isTouching(Bat.class) || isTouching(Ball.class)) {
-            stand = new GreenfootImage("squishedCat4.png");
-            speed = 0;
-        }   
-        if (isTouching(Star.class)) {
-            removeTouching(Star.class);
-            myworld.addStar(-1);  
-            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
-            iCorrectForKey++;
-        }
-        if (isTouching(Entrance2.class)) {           
-            speed = 0;
-            Greenfoot.setWorld(new Lvl3());                
-        }
-        if (speed == 0 && !isTouching(Entrance2.class)){  
-            if (counter == 25) {
-                myworld.loseLife(1);
-                getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
-                getWorld().removeObject(this);   
-            }
-            else
-                counter++;
-        }        
+        MutualWorld myworld = (MutualWorld) getWorld();     
         //if touch train or car 
         if (isTouching(Car.class) || isTouching(Train.class)) {
-            getWorld().setPaintOrder(Bridge.class   , Car.class, Flag.class, Train.class);
+            getWorld().setPaintOrder(Bridge.class, Car.class, Flag.class, Train.class);
             myworld.squish();
             stand = new GreenfootImage("squishedCat4.png");
             speed = 0;
@@ -105,14 +82,14 @@ public class Cat3 extends Actor
         }
         // if lose life 
         if (speed == 0 &&  !isTouching(House.class)){  
-            if (counter == 25) {                
+            if (counter == 50) {                
                 myworld.loseLife(1);
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this);   
             }
             else
                 counter++;
-        }   
+        }     
     }
     
     /**

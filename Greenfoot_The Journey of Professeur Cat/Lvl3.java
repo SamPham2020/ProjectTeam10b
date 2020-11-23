@@ -18,11 +18,16 @@ public class Lvl3 extends MutualWorld
     {
         prepare();
     }
-
+    
     public void act() {
-        levelTransition();
         addObstacles();   
         carSound.play();
+        if (Greenfoot.isKeyDown("i"))
+            Greenfoot.setWorld(new InstructionPage());        
+        if (Greenfoot.isKeyDown("m"))
+            Greenfoot.setWorld(new AMainMenu());       
+        if (Greenfoot.isKeyDown("r"))
+            Greenfoot.setWorld(new Lvl3());              
     }    
         
     /**

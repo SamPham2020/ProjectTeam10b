@@ -13,7 +13,7 @@ public class MutualWorld extends World
     protected int starNum = 3;    
     protected static int lifeNum = 3;    
     private GreenfootSound get1Sound = new GreenfootSound("PointCollected.wav");
-    private GreenfootSound loseSound = new GreenfootSound("GameOver.wav");
+    protected GreenfootSound loseSound = new GreenfootSound("GameOver.wav");
     private GreenfootSound winSound = new GreenfootSound("yay_victory.wav");
     private GreenfootSound squishedSound = new GreenfootSound("squished.mp3");
     private GreenfootSound splashSound = new GreenfootSound("splash.mp3");
@@ -28,11 +28,7 @@ public class MutualWorld extends World
         showText("Life:" + lifeNum, 100, 100);  
         prepare();
     }
-
-    public void act() {
-        levelTransition();
-    }
-        
+    
     protected void addKey(int keys) { 
         keyNum += keys;           
         gainSound();
@@ -68,19 +64,7 @@ public class MutualWorld extends World
     
     public void squish() {
         squishedSound.play();
-    }
-    
-    /**
-     * Jump bewteen pages 
-     */
-    public void levelTransition() { 
-        if (Greenfoot.isKeyDown("r"))
-            Greenfoot.setWorld(new Lvl3Temp());          
-        if (Greenfoot.isKeyDown("i"))
-            Greenfoot.setWorld(new InstructionPage());        
-        if (Greenfoot.isKeyDown("m"))
-            Greenfoot.setWorld(new AMainMenu());    
-    }
+    }  
     
     private void prepare() {       
         Bar bar = new Bar();
@@ -96,9 +80,9 @@ public class MutualWorld extends World
     public void addStar(int stars) { 
         starNum += stars;   
         if (starNum == 0)
-            if (lifeNum != 3) {   
+            if (lifeNum != 4) {   
                 lifeNum++;
-                addObject(new Heart(), 1380, 380 + ((lifeNum - 1) * 40));
+                addObject(new Heart(), 1480, 370 + ((lifeNum - 2) * 40));
             }
     }       
 }
