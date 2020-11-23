@@ -31,7 +31,7 @@ public class Lvl2 extends MutualWorld
         if (lifeNum > 0) {
             loseSound.play();
             lifeNum -= life;
-            //showText("Life:" + lifeNum, 100, 100);  
+            showText("Life: " + lifeNum, 50, 50);  
         }
         if (lifeNum > 0) {
             addObject(new Cat2(), 53,353); 
