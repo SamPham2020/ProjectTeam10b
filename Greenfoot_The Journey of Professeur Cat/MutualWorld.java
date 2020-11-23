@@ -25,7 +25,7 @@ public class MutualWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1500, 600, 1); 
-        showText("Life:" + lifeNum, 100, 100);  
+        //showText("Life:" + lifeNum, 100, 100);  
         prepare();
     }
     
@@ -40,7 +40,7 @@ public class MutualWorld extends World
         if (lifeNum > 0) {
             loseSound.play();
             lifeNum -= life;
-            showText("Life:" + lifeNum, 100, 100);  
+            //showText("Life:" + lifeNum, 100, 100);  
         }
         if (lifeNum > 0) {
             addObject(new Cat3(), 53,353); 
@@ -80,9 +80,13 @@ public class MutualWorld extends World
     public void addStar(int stars) { 
         starNum += stars;   
         if (starNum == 0)
-            if (lifeNum != 3) {   
-                lifeNum++;
+            if (lifeNum < 3 && lifeNum == 2) {   
+                ++lifeNum;
                 addObject(new Heart(), 1480, 370 + ((lifeNum - 2) * 40));
+            }
+            else if (lifeNum < 3 && lifeNum == 1) {
+                ++lifeNum;
+                addObject(new Heart(), 1480, 370 + ((lifeNum - 1) * 40));                
             }
     }       
 }
