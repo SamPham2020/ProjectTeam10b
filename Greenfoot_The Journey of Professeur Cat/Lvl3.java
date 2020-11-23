@@ -34,7 +34,7 @@ public class Lvl3 extends MutualWorld
      * Add obstacles 
      */
     public void addObstacles() {
-        setPaintOrder(Branch.class, Bridge.class, Flag.class, Cat.class);
+        setPaintOrder(Branch.class, Bridge.class, Flag.class, Cat.class, Key.class);
         if (counter == 10) {
             if (Greenfoot.getRandomNumber(100) < 3) {   
                 addObject(new Car(), 750, 672);
