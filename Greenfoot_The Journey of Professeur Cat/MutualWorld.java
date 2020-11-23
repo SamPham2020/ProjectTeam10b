@@ -80,7 +80,7 @@ public class MutualWorld extends World
     public void addStar(int stars) { 
         starNum += stars;   
         if (starNum == 0)
-            if (lifeNum != 4) {   
+            if (lifeNum != 3) {   
                 lifeNum++;
                 addObject(new Heart(), 1480, 370 + ((lifeNum - 2) * 40));
             }
