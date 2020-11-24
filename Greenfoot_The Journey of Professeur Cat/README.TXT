@@ -13,3 +13,4 @@ AUTHORS: Shawn Gregory, Astour Krikor, Hong Hien Pham
 1.1: short version of the game to test the mechanics 
 1.2: add loselife and endgame functions to the short version of the game 
 1.3: add temporary character for lvl transition 
+1.4: polish lv 3, relating and merging worlds(2 and 3)
