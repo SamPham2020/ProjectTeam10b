@@ -52,7 +52,7 @@ public class Cat2 extends Actor
             Greenfoot.setWorld(new Lvl3());                
         }
         if (speed == 0 && !isTouching(Entrance2.class)){  
-            if (counter == 50) {
+            if (counter == 25) {
                 Lvl2 myworld = (Lvl2)getWorld();
                 myworld.loseLife(1);
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            

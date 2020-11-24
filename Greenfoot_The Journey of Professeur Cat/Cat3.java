@@ -82,7 +82,7 @@ public class Cat3 extends Actor
         }
         // if lose life 
         if (speed == 0 &&  !isTouching(House.class)){  
-            if (counter == 50) {                
+            if (counter == 25) {                
                 myworld.loseLife(1);
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this);   
@@ -142,6 +142,11 @@ public class Cat3 extends Actor
         }
         else if (Greenfoot.isKeyDown("right")) {
             setLocation(getX() + speed, getY());  
+            isDown = true;
+        }
+        else if (Greenfoot.isKeyDown("space")) {
+            //setLocation(getX() + speed * 2, getY());  
+            move(speed * 2);
             isDown = true;
         }
         else 

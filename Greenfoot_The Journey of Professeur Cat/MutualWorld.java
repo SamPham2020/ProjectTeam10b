@@ -85,14 +85,13 @@ public class MutualWorld extends World
         starNum += stars;   
         score += 100;
         showText("score: " + score, 150, 50);
-        if (starNum == 0)
-            if (lifeNum < 3 && lifeNum == 2) {   
-                ++lifeNum;
-                addObject(new Heart(), 1480, 370 + ((lifeNum - 2) * 40));
+        if (starNum == 0) {                       
+            if (lifeNum < 3) { 
+                addObject(new Heart(), 1480, 494 - lifeNum * 40);                
+                lifeNum++;
+                showText("Life: " + lifeNum, 50, 50);
             }
-            else if (lifeNum < 3 && lifeNum == 1) {
-                ++lifeNum;
-                addObject(new Heart(), 1480, 370 + ((lifeNum - 1) * 40));                
-            }
+        }
+
     }       
 }
