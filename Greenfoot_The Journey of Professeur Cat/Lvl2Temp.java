@@ -10,8 +10,8 @@ public class Lvl2Temp extends World
 {
     private int speed = 0;
     private int starNum = 3;
-    private int lifeNum = AMainMenu.lifeNum;
-    //public int lifeNum = 3; //Lvl3Sample.lifeNum;
+    private int lifeNum = 3;
+    
     /**
      * Constructor for objects of class Lvl2Temp.
      * 

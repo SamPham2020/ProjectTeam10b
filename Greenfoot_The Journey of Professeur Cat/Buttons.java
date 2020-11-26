@@ -28,11 +28,11 @@ public class Buttons extends Actor
         }
         else 
             setImage(button1);
-        if (!mouseDown && Greenfoot.mousePressed(this)) {
-            setImage(button2);
-        }
-        if (mouseDown && Greenfoot.mouseClicked(this)) {
-            setImage(button1); 
-        }               
+        //if (!mouseDown && Greenfoot.mousePressed(this)) {
+        //    setImage(button2);
+        //}
+        //if (mouseDown && Greenfoot.mouseClicked(this)) {
+        //    setImage(button1); 
+        //}               
     }
 }

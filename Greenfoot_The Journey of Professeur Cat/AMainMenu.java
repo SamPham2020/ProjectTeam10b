@@ -8,7 +8,6 @@
  */
 public class AMainMenu extends World
 {
-    public static int lifeNum = 3;
     /**
      * Constructor for objects of class AMainMenu.
      * 
@@ -17,20 +16,15 @@ public class AMainMenu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1410, 670, 1);   
-
     }
 
     public void act() {
-
+    
         if (Greenfoot.isKeyDown("enter"))
             Greenfoot.setWorld(new Lvl1Temp());        
         if (Greenfoot.isKeyDown("i"))
             Greenfoot.setWorld(new InstructionPage());
         if (Greenfoot.isKeyDown("c"))
             Greenfoot.setWorld(new Credit());            
-    }
-
-    public static int getLife() {
-        return lifeNum;
     }
 }
