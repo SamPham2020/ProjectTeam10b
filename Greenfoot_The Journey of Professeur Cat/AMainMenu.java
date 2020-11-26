@@ -21,11 +21,12 @@ public class AMainMenu extends World
     }
 
     public void act() {
-        if (Greenfoot.mousePressed("enter"))
+
+        if (Greenfoot.isKeyDown("enter"))
             Greenfoot.setWorld(new Lvl1Temp());        
-        if (Greenfoot.mousePressed("i"))
+        if (Greenfoot.isKeyDown("i"))
             Greenfoot.setWorld(new InstructionPage());
-        if (Greenfoot.mousePressed("c"))
+        if (Greenfoot.isKeyDown("c"))
             Greenfoot.setWorld(new Credit());            
     }
 
