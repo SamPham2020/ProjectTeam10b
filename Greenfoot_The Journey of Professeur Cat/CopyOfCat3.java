@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
-* Write a description of class Cat1Temp here.
+* Write a description of class CopyOfCat3 here.
 * 
 * @author (your name) 
 * @version (a version number or a date)
 */
-public class Cat1Temp extends Actor
+public class CopyOfCat3 extends Actor
 {
     private boolean isDown;
     public int speed = 4;
@@ -15,7 +15,7 @@ public class Cat1Temp extends Actor
     private GreenfootImage run1 = null;
     private GreenfootImage run2 = null;
     
-    public Cat1Temp() {
+    public CopyOfCat3() {
         stand = new GreenfootImage("Stand1.png");    
         run1 = new GreenfootImage("Run1.png");
         run2 = new GreenfootImage("Run2.png");
@@ -24,7 +24,7 @@ public class Cat1Temp extends Actor
     }
     
     /**
-     * Act - do whatever the Cat1Temp wants to do. This method is called whenever
+     * Act - do whatever the CopyOfCat3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -35,16 +35,14 @@ public class Cat1Temp extends Actor
         }
         else
             setImage(stand);    
-        if (isTouching(Entrance2.class))
-            Greenfoot.setWorld(new Lvl3()); 
-        encounter();         
+        encounter();      
     }  
     
     /**
      * Interaction between cat and other objects and the consequences 
      */
     public void encounter() {
-        MutualWorld myworld = (MutualWorld) getWorld();  
+        MutualWorld myworld = (MutualWorld) getWorld();     
         //if touch train or car 
         if (isTouching(Car.class) || isTouching(Train.class)) {
             getWorld().setPaintOrder(Bridge.class, Car.class, Flag.class, Train.class);
@@ -55,10 +53,10 @@ public class Cat1Temp extends Actor
         
         // if touch river
         if (isTouching(River.class) && getX() > 1320 && getX() < 1390 
-            || isTouching(BigRiver.class) && getX() > 500 && getX() < 605) {
+            || isTouching(River.class) && getX() > 500 && getX() < 605) {
             if (isTouching(Rock.class) && speed != 0) {
                 setLocation(getX(), getY() + 3);
-                getWorld().setPaintOrder(Cat1Temp.class);
+                getWorld().setPaintOrder(CopyOfCat3.class);
             }
             else
             {               
@@ -86,12 +84,12 @@ public class Cat1Temp extends Actor
         if (speed == 0 &&  !isTouching(House.class)){  
             if (counter == 25) {                
                 myworld.loseLife(1);
-                myworld.removeObject(myworld.getObjects(Heart.class).get(0));            
+                getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this);   
             }
             else
                 counter++;
-        }   
+        }     
     }
     
     /**
@@ -144,6 +142,11 @@ public class Cat1Temp extends Actor
         }
         else if (Greenfoot.isKeyDown("right")) {
             setLocation(getX() + speed, getY());  
+            isDown = true;
+        }
+        else if (Greenfoot.isKeyDown("space")) {
+            //setLocation(getX() + speed * 2, getY());  
+            move(speed * 2);
             isDown = true;
         }
         else 

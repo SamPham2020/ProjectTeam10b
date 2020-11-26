@@ -9,18 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class River extends Actor
 {
     private GreenfootImage img1 = new GreenfootImage("river .png");
+    private int sizeChange;
     
-    public River() {
-        img1.scale(img1.getWidth() - 82, img1.getHeight());
+    public River(int sizeChange) {
+        img1.scale(img1.getWidth() - sizeChange, img1.getHeight());
         setImage(img1);
-    }
-    
-    /**
-     * Act - do whatever the River wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    }          
 }

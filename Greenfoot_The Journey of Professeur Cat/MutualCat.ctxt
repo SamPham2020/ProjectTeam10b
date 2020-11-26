@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=MutualCat
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MutualCat\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=MutualCat()
+comment2.params=
+comment2.target=java.lang.Boolean\ isMove()
+comment2.text=\r\n\ Verify\ if\ the\ character\ is\ moving\ \ \ \ \r\n
+comment3.params=
+comment3.target=void\ switchImage()
+comment3.text=\r\n\ Animation\ when\ moving\r\n
+comment4.params=
+comment4.target=void\ movement()
+comment4.text=\r\n\ Movement\ made\ based\ on\ entered\ key\ \r\n
+numComments=5

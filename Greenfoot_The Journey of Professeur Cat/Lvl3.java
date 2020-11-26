@@ -34,7 +34,7 @@ public class Lvl3 extends MutualWorld
      * Add obstacles 
      */
     public void addObstacles() {
-        setPaintOrder(Branch.class, Bridge.class, Flag.class, Cat.class, Key.class);
+        setPaintOrder(Branch.class, Bridge.class, Flag.class, Cat3.class, Key.class);
         if (counter == 10) {
             if (Greenfoot.getRandomNumber(100) < 3) {   
                 addObject(new Car(), 750, 672);
@@ -69,24 +69,24 @@ public class Lvl3 extends MutualWorld
         for (int i = 0; i < 3; i++) {
             addObject(new Track(), 150 + 100 * i, 300);
         }
-    
+
         for (int i = 0; i < 3; i++) {
             addObject(new Road(), 750 + 200 * i, 300);
             addObject(new Bridge(), 750 + 200 * i, 25);
         }
-    
-        BigRiver bigRiver = new BigRiver();
-        addObject(bigRiver, 550, 300);
-        River river = new River();
-        addObject(river,1350, 300);
-    
+
+        River river1 = new River(32);
+        addObject(river1, 550, 300);           
+        River river2 = new River(82);
+        addObject(river2, 1350, 300);
+
         Cat3 cat = new Cat3();
         addObject(cat,41,296);
-    
+
         for (int i = 0; i < 3; i++) {
             addObject(new Key(), Greenfoot.getRandomNumber(1300) + 100, Greenfoot.getRandomNumber(350) + 50);   
         }  
-    
+
         Flag flag = new Flag();
         addObject(flag,284,473);
     }    

@@ -17,16 +17,18 @@ public class AMainMenu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1410, 670, 1);   
+
     }
-        
+
     public void act() {
-        if (Greenfoot.isKeyDown("enter"))
+        if (Greenfoot.mousePressed("enter"))
             Greenfoot.setWorld(new Lvl1Temp());        
-        if (Greenfoot.isKeyDown("i"))
+        if (Greenfoot.mousePressed("i"))
             Greenfoot.setWorld(new InstructionPage());
-        if (Greenfoot.isKeyDown("c"))
+        if (Greenfoot.mousePressed("c"))
             Greenfoot.setWorld(new Credit());            
     }
+
     public static int getLife() {
         return lifeNum;
     }

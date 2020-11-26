@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
-* Write a description of class TemporaryCatForLvlTransition here.
+* Write a description of class CopyOfCat2 here.
 * 
 * @author (your name) 
 * @version (a version number or a date)
 */
-public class TemporaryCatForLvlTransition extends Actor
+public class CopyOfCat2 extends Actor
 {
     private boolean isDown;
     public int speed = 4;
@@ -15,7 +15,7 @@ public class TemporaryCatForLvlTransition extends Actor
     private GreenfootImage run1 = null;
     private GreenfootImage run2 = null;
     
-    public TemporaryCatForLvlTransition() {
+    public CopyOfCat2() {
         stand = new GreenfootImage("Stand1.png");    
         run1 = new GreenfootImage("Run1.png");
         run2 = new GreenfootImage("Run2.png");
@@ -24,7 +24,7 @@ public class TemporaryCatForLvlTransition extends Actor
     }
     
     /**
-     * Act - do whatever the TemporaryCatForLvlTransition wants to do. This method is called whenever
+     * Act - do whatever the CopyOfCat2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -35,48 +35,25 @@ public class TemporaryCatForLvlTransition extends Actor
             switchImage();
         }
         else
-            setImage(stand); 
-    
-        if (isTouching(Entrance1.class))
-            Greenfoot.setWorld(new Lvl2());    
-        if (isTouching(Entrance2.class))
-            Greenfoot.setWorld(new Lvl3());
-        if (isTouching(House.class))
-            Greenfoot.setWorld(new Over());    
-        
-        if (isTouching(Car.class) && getX() > 560 || isTouching(Train.class) && getX() > 1000) {
-            getWorld().setPaintOrder(Bridge.class, Car.class, Flag.class, Train.class);
+            setImage(stand);    
+        if (isTouching(Bat.class) || isTouching(Ball.class)) {
             stand = new GreenfootImage("squishedCat4.png");
             speed = 0;
         }   
-        if (isTouching(River.class) && getX() > 189 && getX() < 320) {
-            if (isTouching(Rock.class) && speed != 0) {
-                setLocation(getX(), getY() + 3);
-                getWorld().setPaintOrder(TemporaryCatForLvlTransition.class);
-            }
-            else
-            {               
-                stand = new GreenfootImage("graycatdrowed2.png");
-                getWorld().setPaintOrder(Branch.class, Rock.class);
-                speed = 0;                
-            }
-        }
-        if (isTouching(Key.class)) {
-            removeTouching(Key.class);
-            Lvl3Sample myworld = (Lvl3Sample) getWorld();
-            myworld.addKey(-1);  
-            myworld.addObject(new Correct(), 1390, 130 + iCorrectForKey * 40);
+        if (isTouching(Star.class)) {
+            removeTouching(Star.class);
+            MutualWorld myworld = (MutualWorld) getWorld();
+            myworld.addStar(-1);  
+            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
             iCorrectForKey++;
         }
-        if (isTouching(House.class)) {           
-            getWorld().showText("Congratz! You have finished the sample lv3.\n Press enter to go to final scene ", 700, 330); 
+        if (isTouching(Entrance2.class)) {           
             speed = 0;
-            if (Greenfoot.isKeyDown("enter"))
-                Greenfoot.setWorld(new Over());                
+            Greenfoot.setWorld(new Lvl3());                
         }
-        if (speed == 0 &&  !isTouching(House.class)){  
-            if (counter == 50) {
-                Lvl3Sample myworld = (Lvl3Sample)getWorld();
+        if (speed == 0 && !isTouching(Entrance2.class)){  
+            if (counter == 25) {
+                Lvl2 myworld = (Lvl2)getWorld();
                 myworld.loseLife(1);
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this);   
@@ -84,6 +61,7 @@ public class TemporaryCatForLvlTransition extends Actor
             else
                 counter++;
         }
+        
     }  
         
     /**
