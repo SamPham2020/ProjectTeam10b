@@ -72,7 +72,7 @@ public class Lvl3 extends MutualWorld
 
         for (int i = 0; i < 3; i++) {
             addObject(new Road(), 750 + 200 * i, 300);
-            addObject(new Bridge(), 750 + 200 * i, 25);
+            addObject(new Bridge(0), 750 + 200 * i, 25);
         }
 
         River river1 = new River(32);

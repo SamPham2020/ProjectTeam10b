@@ -8,12 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bridge extends Actor
 {
-    /**
-     * Act - do whatever the Bridge wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    private GreenfootImage img1 = new GreenfootImage("bridge.png");
+    private int sizeChange;
+    
+    public Bridge(int sizeChange) {
+        img1.scale(img1.getWidth() + sizeChange, img1.getHeight());
+        setImage(img1);
+    }      
 }
