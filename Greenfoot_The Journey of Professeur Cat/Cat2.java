@@ -29,6 +29,7 @@ public class Cat2 extends MutualCat
         if (isTouching(Star.class)) {
             removeTouching(Star.class);
             MutualWorld myworld = (MutualWorld) getWorld();
+            myworld.gainSound();
             myworld.addStar(-1);  
             myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
             iCorrectForKey++;

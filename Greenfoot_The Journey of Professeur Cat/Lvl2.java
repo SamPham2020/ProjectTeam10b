@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lvl2 extends MutualWorld
 {
     private int speed = 0;
+    private GreenfootSound caveSound = new GreenfootSound("moving-a-boulder.wav"); 
     /**
      * Constructor for objects of class Lvl2.
      * 
@@ -19,6 +20,7 @@ public class Lvl2 extends MutualWorld
     }
     
     public void act() {
+        caveSound.play();
         if (Greenfoot.isKeyDown("i"))
             Greenfoot.setWorld(new InstructionPage());        
         if (Greenfoot.isKeyDown("m"))
@@ -29,7 +31,7 @@ public class Lvl2 extends MutualWorld
 
     public void loseLife(int life) {        
         if (lifeNum > 0) {
-            loseSound.play();
+            squish();
             lifeNum -= life;
             showText("Life: " + lifeNum, 50, 50);  
         }
