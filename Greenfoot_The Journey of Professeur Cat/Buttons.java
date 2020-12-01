@@ -23,16 +23,13 @@ public class Buttons extends Actor
      */
     public void act() 
     {
-        if (Greenfoot.mousePressed(this)) {
-            setImage(button2);            
+        if (!mouseDown && Greenfoot.mousePressed(this)) {
+            setImage(button2);
+            mouseDown = true;
         }
-        else 
-            setImage(button1);
-        //if (!mouseDown && Greenfoot.mousePressed(this)) {
-        //    setImage(button2);
-        //}
-        //if (mouseDown && Greenfoot.mouseClicked(this)) {
-        //    setImage(button1); 
-        //}               
+        if (mouseDown && Greenfoot.mouseClicked(this)) {
+            setImage(button1); 
+            mouseDown = false;
+        }               
     }
 }
