@@ -31,6 +31,16 @@ public class MutualWorld extends World
         prepare();
     }
     
+    public void reset() {
+        if (Greenfoot.isKeyDown("i"))
+            Greenfoot.setWorld(new InstructionPage());        
+                    
+        if (Greenfoot.isKeyDown("m")) {
+            score = 0;
+            lifeNum = 3;
+            Greenfoot.setWorld(new AMainMenu());            
+        }     
+    }
     protected void addKey(int keys) { 
         keyNum += keys;          
         score += 100;
@@ -50,7 +60,7 @@ public class MutualWorld extends World
             addObject(new Cat3(), 53,353); 
         }
         if (lifeNum < 1) {
-            showText("Game Over\nPress m to return to the main menu", 705, 335);              
+            showText("Game Over\nPress m to return to the main menu", 705, 335);                 
         }
     }        
     

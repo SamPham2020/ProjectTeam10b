@@ -20,10 +20,7 @@ public class Lvl1Temp extends MutualWorld
     }
     
      public void act() {
-        if (Greenfoot.isKeyDown("i"))
-            Greenfoot.setWorld(new InstructionPage());        
-        if (Greenfoot.isKeyDown("m"))
-            Greenfoot.setWorld(new AMainMenu());
+        reset();
         if (Greenfoot.isKeyDown("r"))
             Greenfoot.setWorld(new Lvl2());                  
     }    
