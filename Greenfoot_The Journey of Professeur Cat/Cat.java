@@ -61,7 +61,8 @@ public class Cat extends MutualCat
             Greenfoot.setWorld(new Lvl2());
             
         if (speed == 0 &&  !isTouching(Entrance2.class)) {  
-        if (counter == 25) {                
+        if (counter == 25) {  
+            MutualWorld myworld = (MutualWorld) getWorld();
             myworld.loseLife(1);
             getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
             getWorld().removeObject(this);   
