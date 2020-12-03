@@ -23,7 +23,7 @@ public class Lvl1Temp extends MutualWorld
         Greenfoot.playSound("waves.wav");
         reset();
         if (Greenfoot.isKeyDown("r"))
-            Greenfoot.setWorld(new Lvl2());                  
+            Greenfoot.setWorld(new Lvl1Temp());                  
     }    
 
     public void loseLife(int life) {        
