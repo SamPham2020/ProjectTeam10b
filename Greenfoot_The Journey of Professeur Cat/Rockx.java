@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rockx extends Actor
 { 
-    public int speed = 3;
+    public static int speed = 3;
     /**
      * Act - do whatever the Rock wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,5 +17,9 @@ public class Rockx extends Actor
         setLocation(getX(), getY() + speed);
         if (isAtEdge()) 
             speed *= -1;
-    }  
+    }
+    
+    public static int getSpeed() {
+    return speed;
+    }
 }
