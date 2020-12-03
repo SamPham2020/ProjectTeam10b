@@ -52,20 +52,20 @@ public class Lvl1Temp extends MutualWorld
         Island3 island3 = new Island3();
         addObject(island3,490,320);
         Rockx rock2 = new Rockx();
-        addObject(rock2,1264,446);
+        addObject(rock2,1264,167);
         Rockx rock3 = new Rockx();
-        addObject(rock3,695,333);
+        addObject(rock3,695,167);
         Island2 island2 = new Island2();
         addObject(island2,893,195);
         removeObject(rock2);
 
-        addObject(rock2,1081,150);
+        addObject(rock2,1081,167);
         Land land = new Land();
         addObject(land,1439,320);
         Rockx rock4 = new Rockx();
-        addObject(rock4,1198,500);
+        addObject(rock4,1198,167);
         Rockx rock5 = new Rockx();
-        addObject(rock5,1315,100);
+        addObject(rock5,1315,167);
         Cat cat = new Cat();
         addObject(cat,122,129);
         Entrance2 entrance2 = new Entrance2();
