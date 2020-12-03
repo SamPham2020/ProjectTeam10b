@@ -20,6 +20,7 @@ public class Lvl1Temp extends MutualWorld
     }
     
      public void act() {
+        Greenfoot.playSound("waves.wav");
         reset();
         if (Greenfoot.isKeyDown("r"))
             Greenfoot.setWorld(new Lvl2());                  
