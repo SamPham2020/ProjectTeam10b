@@ -39,9 +39,7 @@ public class Cat extends MutualCat
             getWorld().setPaintOrder(Cat.class);
         }
         if (isTouching(Rockx.class) && speed != 0) {
-            setLocation(getX(), getY() + speedOnRock);
-            if (isAtEdge())
-                speedOnRock *= -1;
+            setLocation(getX(), getY() + Rockx.getSpeed());
             getWorld().setPaintOrder(Cat.class);
         }
         else if(!isTouching(Island1.class) && !isTouching(Island2.class) && !isTouching(Island3.class) && !isTouching(Land.class) &&
