@@ -33,7 +33,7 @@ public class Lvl1Temp extends MutualWorld
             showText("Life: " + lifeNum, 50, 50);  
         }
         if (lifeNum > 0) {
-            addObject(new Cat2(), 53,353); 
+            addObject(new Cat(), 53,353); 
         }
         if (lifeNum < 1) {
             showText("Game Over\nPress m to return to the main menu", 705, 335);              
