@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lvl1Temp extends MutualWorld
 {
+    private GreenfootSound wavesSound = new GreenfootSound("ocean.wav");
 
     /**
      * Constructor for objects of class MyWorld.
@@ -20,7 +21,11 @@ public class Lvl1Temp extends MutualWorld
     }
     
      public void act() {
-        Greenfoot.playSound("waves.wav");
+         int timer = 0;
+        while(timer % 2 == 0) { 
+            wavesSound.play();
+            timer++;
+        }
         reset();
         if (Greenfoot.isKeyDown("r"))
             Greenfoot.setWorld(new Lvl1Temp());                  
