@@ -50,6 +50,9 @@ public class Cat extends MutualCat
         }
         if (isTouching(Star.class)) {
             removeTouching(Star.class);
+            MutualWorld myworld = (MutualWorld) getWorld();
+            myworld.gainSound();
+            myworld.addStar(-1);
         }
         if (isTouching(Entrance2.class)) {
             getWorld().showText("Congrats! Mission Accomplished!", 700, 330);
