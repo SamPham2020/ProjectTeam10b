@@ -22,15 +22,23 @@ public class Cat2 extends MutualCat
      * Interaction between cat2 and other objects and the consequences of lv2
      */    
     private void encounter() {
-        if (isTouching(Bat.class) || isTouching(Ball.class)) {
+        if (isTouching(Ball.class)) {
+            getWorld().setPaintOrder(Ball.class, Bat.class);
             stand = new GreenfootImage("squishedCat4.png");
             speed = 0;
         }   
+        if (isTouching(Bat.class)) {
+            getWorld().setPaintOrder(Ball.class, Bat.class);
+            MutualWorld myworld = (MutualWorld) getWorld();
+            myworld.getScore(2);
+        }    
         if (isTouching(Star.class)) {
             removeTouching(Star.class);
             MutualWorld myworld = (MutualWorld) getWorld();
             myworld.gainSound();
             myworld.addStar(-1);  
+            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
+            iCorrectForKey++;
         }
         if (isTouching(Entrance2.class)) {           
             speed = 0;
