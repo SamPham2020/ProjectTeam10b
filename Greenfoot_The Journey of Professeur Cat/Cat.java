@@ -36,11 +36,11 @@ public class Cat extends MutualCat
             setImage(stand);
         if (isTouching(Island1.class)) {
             setLocation(getX(), getY());
-            getWorld().setPaintOrder(Cat.class);
+            getWorld().setPaintOrder(Instruction.class, Cat.class);
         }
         if (isTouching(Rockx.class) && speed != 0) {
             setLocation(getX(), getY() + Rockx.getSpeed());
-            getWorld().setPaintOrder(Cat.class);
+            getWorld().setPaintOrder(Instruction.class, Cat.class);
         }
         else if(!isTouching(Island1.class) && !isTouching(Island2.class) && !isTouching(Island3.class) && !isTouching(Land.class) &&
         !isTouching(Rockx.class)){
@@ -56,7 +56,6 @@ public class Cat extends MutualCat
         }
         if (isTouching(Entrance2.class)) {
             getWorld().showText("Congrats! Mission Accomplished!", 700, 330);
-            Lvl1.soundStop();
             speed = 0;
             Greenfoot.setWorld(new Lvl2());
         }    
