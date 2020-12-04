@@ -25,7 +25,7 @@ public class Cat3 extends MutualCat
         Lvl3 myworld = (Lvl3) getWorld();     
         //if touch train or car 
         if (isTouching(Car.class) || isTouching(Train.class)) {
-            getWorld().setPaintOrder(Bridge.class, Car.class, Flag.class, Train.class);
+            getWorld().setPaintOrder(Instruction.class, Bridge.class, Car.class, Flag.class, Train.class);
             myworld.squish();
             stand = new GreenfootImage("squishedCat4.png");
             speed = 0;

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lvl1 extends MutualWorld
 {
-    private static GreenfootSound wavesSound = new GreenfootSound("ocean.mp3");
+    private static GreenfootSound wavesSound = new GreenfootSound("ocean.wav");
 
     /**
      * Constructor for objects of class MyWorld.
@@ -27,14 +27,6 @@ public class Lvl1 extends MutualWorld
         }       
     }    
     
-    /**
-     * From Sam: for some reason (maybe it's mp3 or length), the sound of wave does 
-     *      not stop when went to the next level. I made this to stop when Cat touches cave 
-     *      entrance. Please feel free to modify to handle this situation, Astour
-     */
-    public static void soundStop() {
-        wavesSound.stop();
-    }
     public void loseLife(int life) {        
         if (lifeNum > 0) {
             loseSound.play();

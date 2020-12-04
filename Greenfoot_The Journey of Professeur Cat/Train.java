@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Train extends Obstacles
 {   
-    private int counter = 1;
     private GreenfootImage img1 = new GreenfootImage("train2-1.png");
     private GreenfootImage img2 = new GreenfootImage("train2-2.png");
     private GreenfootImage img3 = new GreenfootImage("train2-3.png");

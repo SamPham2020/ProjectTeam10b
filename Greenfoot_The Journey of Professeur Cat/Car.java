@@ -14,6 +14,6 @@ public class Car extends Obstacles
      */
     public void act() 
     {
-        movement(-5);
+        movement(-1);
     }    
 }
