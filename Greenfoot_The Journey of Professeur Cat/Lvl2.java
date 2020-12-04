@@ -25,8 +25,7 @@ public class Lvl2 extends MutualWorld
          * or we can make the audio button/option for user later
          */ 
         caveSound.setVolume(50);
-        caveSound.play();
-        reset();                
+        caveSound.play();         
     }    
 
     public void loseLife(int life) {        
@@ -39,7 +38,7 @@ public class Lvl2 extends MutualWorld
             addObject(new Cat2(), 82, 552); 
         }
         if (lifeNum < 1) {
-            showText("Game Over\nPress m to return to the main menu", 705, 335);              
+            showText("Game Over", 750, 300);              
         }
     }
     

@@ -24,8 +24,7 @@ public class Lvl1 extends MutualWorld
         while(timer % 2 == 0) { 
             wavesSound.play();
             timer++;
-        }
-        reset();        
+        }       
     }    
     
     /**
@@ -46,7 +45,7 @@ public class Lvl1 extends MutualWorld
             addObject(new Cat(), 122,129); 
         }
         if (lifeNum < 1) {
-            showText("Game Over\nPress m to return to the main menu", 705, 335);              
+            showText("Game Over", 705, 335);              
         }
     }
 

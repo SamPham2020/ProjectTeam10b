@@ -21,8 +21,7 @@ public class Lvl3 extends MutualWorld
     
     public void act() {
         addObstacles();   
-        carSound.play();
-        reset();       
+        carSound.play();     
     }    
         
     /**
