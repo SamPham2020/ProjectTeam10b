@@ -14,13 +14,8 @@ public class Over extends World
      */
     public Over()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1500, 600, 1); 
-    }
-    
-    public void act() {
-        if (Greenfoot.isKeyDown("m")) {  
-            Greenfoot.setWorld(new AMainMenu()); 
-        }
+        ButtonForHome buttonForHome = new ButtonForHome(20);
+        addObject(buttonForHome,1470,567);        
     }
 }
