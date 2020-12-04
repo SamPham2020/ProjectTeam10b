@@ -56,6 +56,7 @@ public class Cat extends MutualCat
         }
         if (isTouching(Entrance2.class)) {
             getWorld().showText("Congrats! Mission Accomplished!", 700, 330);
+            Lvl1.soundStop();
             speed = 0;
             Greenfoot.setWorld(new Lvl2());
         }    
