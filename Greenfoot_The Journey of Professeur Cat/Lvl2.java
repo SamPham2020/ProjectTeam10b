@@ -38,7 +38,7 @@ public class Lvl2 extends MutualWorld
             addObject(new Cat2(), 82, 552); 
         }
         if (lifeNum < 1) {
-            showText("Game Over", 750, 300);              
+            addObject(new GameOverLose(score), 750, 300);             
         }
     }
     

@@ -51,7 +51,7 @@ public class MutualWorld extends World
             addObject(new Cat3(), 41, 296); 
        }
        if (lifeNum < 1) {
-          showText("Game Over", 750, 300);                 
+           addObject(new GameOverLose(score), 750, 300);               
        }
     }       
     

@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=GameOverLose
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ GameOverLose\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
+comment1.params=Game_Over\ Try_Again\ Score\ score
+comment1.target=void\ Image(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ GameOverLose\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment2.params=score
+comment2.target=GameOverLose(int)
+numComments=3
