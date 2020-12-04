@@ -19,7 +19,8 @@ public class Over extends World
     }
     
     public void act() {
-        if (Greenfoot.isKeyDown("m"))
+        if (Greenfoot.isKeyDown("m")) {  
             Greenfoot.setWorld(new AMainMenu()); 
+        }
     }
 }
