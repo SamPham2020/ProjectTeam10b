@@ -22,9 +22,7 @@ public class Lvl3 extends MutualWorld
     public void act() {
         addObstacles();   
         carSound.play();
-        reset();
-        if (Greenfoot.isKeyDown("r"))
-            Greenfoot.setWorld(new Lvl3());              
+        reset();       
     }    
         
     /**

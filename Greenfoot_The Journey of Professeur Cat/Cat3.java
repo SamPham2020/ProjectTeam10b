@@ -41,7 +41,7 @@ public class Cat3 extends MutualCat
             {               
                 stand = new GreenfootImage("graycatdrowed2.png");
                 myworld.drowned();
-                getWorld().setPaintOrder(Branch.class, Rock.class);
+                getWorld().setPaintOrder(Rock.class);
                 speed = 0;                
             }
         }     
@@ -49,8 +49,6 @@ public class Cat3 extends MutualCat
         if (isTouching(Key.class)) {
             removeTouching(Key.class);
             myworld.addKey(-1);  
-            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
-            iCorrectForKey++;
         }
         // if touch house 
         if (isTouching(House.class)) {           

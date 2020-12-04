@@ -31,10 +31,7 @@ public class MutualWorld extends World
         prepare();
     }
     
-    public void reset() {
-        if (Greenfoot.isKeyDown("i"))
-            Greenfoot.setWorld(new InstructionPage());        
-                    
+    public void reset() {             
         if (Greenfoot.isKeyDown("m")) {
             score = 0;
             lifeNum = 3;
@@ -50,19 +47,18 @@ public class MutualWorld extends World
             addObject(new House(), 1450, 50);
     }
     
+    //need to make mutual method to avoid repeating
     public void loseLife(int life) {        
         if (lifeNum > 0) {
-            loseSound.play();
+           loseSound.play();
             lifeNum -= life;
             showText("Life:" + lifeNum, 50, 50);  
-        }
-        if (lifeNum > 0) {
-            addObject(new Cat3(), 53,353); 
-        }
-        if (lifeNum < 1) {
-            showText("Game Over\nPress m to return to the main menu", 705, 335);                 
-        }
-    }        
+       }
+
+       if (lifeNum < 1) {
+          showText("Game Over\nPress m to return to the main menu", 705, 335);                 
+       }
+    }       
     
     public void drowned() {
         splashSound.play();
@@ -81,14 +77,14 @@ public class MutualWorld extends World
     }  
     
     private void prepare() {       
-        Bar bar = new Bar();
-        addObject(bar,1481,381);
-        Heart heart = new Heart();
-        addObject(heart,1480,413);
-        Heart heart2 = new Heart();
-        addObject(heart2,1479,452);
-        Heart heart3 = new Heart();
-        addObject(heart3,1479,494);
+        for (int i = 0; i < lifeNum; i++) {
+            addObject(new Heart(), 1480, 494 - i * 40);            
+        }
+        
+        ButtonForInstruction buttonForInstruction = new ButtonForInstruction(20);
+        addObject(buttonForInstruction,1420,567);
+        ButtonForHome buttonForHome = new ButtonForHome(20);
+        addObject(buttonForHome,1470,567);
     }      
 
     public void addStar(int stars) { 
@@ -102,6 +98,5 @@ public class MutualWorld extends World
                 showText("Life: " + lifeNum, 50, 50);
             }
         }
-
     }       
 }

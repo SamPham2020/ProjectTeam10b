@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lvl1Temp extends MutualWorld
+public class Lvl1 extends MutualWorld
 {
     private GreenfootSound wavesSound = new GreenfootSound("ocean.wav");
 
@@ -14,9 +14,8 @@ public class Lvl1Temp extends MutualWorld
      * Constructor for objects of class MyWorld.
      * 
      */
-    public Lvl1Temp()
+    public Lvl1()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         prepare();
     }
     
@@ -26,9 +25,7 @@ public class Lvl1Temp extends MutualWorld
             wavesSound.play();
             timer++;
         }
-        reset();
-        if (Greenfoot.isKeyDown("r"))
-            Greenfoot.setWorld(new Lvl1Temp());                  
+        reset();        
     }    
 
     public void loseLife(int life) {        
@@ -38,7 +35,7 @@ public class Lvl1Temp extends MutualWorld
             showText("Life: " + lifeNum, 50, 50);  
         }
         if (lifeNum > 0) {
-            addObject(new Cat(), 53,353); 
+            addObject(new Cat(), 122,129); 
         }
         if (lifeNum < 1) {
             showText("Game Over\nPress m to return to the main menu", 705, 335);              
@@ -67,7 +64,7 @@ public class Lvl1Temp extends MutualWorld
 
         addObject(rock2,1081,167);
         Land land = new Land();
-        addObject(land,1439,320);
+        addObject(land,1439,180);
         Rockx rock4 = new Rockx();
         addObject(rock4,1198,167);
         Rockx rock5 = new Rockx();

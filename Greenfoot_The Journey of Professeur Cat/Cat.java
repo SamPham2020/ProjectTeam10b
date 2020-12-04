@@ -57,9 +57,8 @@ public class Cat extends MutualCat
         if (isTouching(Entrance2.class)) {
             getWorld().showText("Congrats! Mission Accomplished!", 700, 330);
             speed = 0;
-            if (Greenfoot.isKeyDown("enter"))
             Greenfoot.setWorld(new Lvl2());
-            
+        }    
         if (speed == 0 &&  !isTouching(Entrance2.class)) {  
         if (counter == 25) {  
             MutualWorld myworld = (MutualWorld) getWorld();
@@ -70,7 +69,6 @@ public class Cat extends MutualCat
         else
             counter++;
         }     
-        }
     }    
 
     /**

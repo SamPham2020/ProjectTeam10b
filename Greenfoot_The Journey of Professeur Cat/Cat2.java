@@ -31,8 +31,6 @@ public class Cat2 extends MutualCat
             MutualWorld myworld = (MutualWorld) getWorld();
             myworld.gainSound();
             myworld.addStar(-1);  
-            myworld.addObject(new Correct(), 1485, 250 + iCorrectForKey * 40);
-            iCorrectForKey++;
         }
         if (isTouching(Entrance2.class)) {           
             speed = 0;

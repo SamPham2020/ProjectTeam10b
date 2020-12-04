@@ -8,21 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Buttons extends Actor
 {
-    private GreenfootImage button1 = new GreenfootImage("start1.png");
-    private GreenfootImage button2 = new GreenfootImage("start2.png");
+    private GreenfootImage button1;
+    private GreenfootImage button2;
     private boolean mouseDown;
     
-    public Buttons() {
+    public Buttons(String img1, String img2) {
+        button1 = new GreenfootImage(img2 + ".png");
+        button2 = new GreenfootImage(img2 + ".png");
         setImage(button1);
         mouseDown = false; 
     }
     
     /**
-     * Act - do whatever the Buttons wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    * Act - do whatever the Buttons wants to do. This method is called whenever
+    * the 'Act' or 'Run' button gets pressed in the environment.
+    */
     public void act() 
-    {
+    {    
         if (!mouseDown && Greenfoot.mousePressed(this)) {
             setImage(button2);
             mouseDown = true;
@@ -32,4 +34,5 @@ public class Buttons extends Actor
             mouseDown = false;
         }               
     }
+
 }

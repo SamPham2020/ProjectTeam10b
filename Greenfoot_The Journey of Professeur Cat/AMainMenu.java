@@ -1,4 +1,4 @@
-    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class AMainMenu here.
@@ -15,16 +15,24 @@ public class AMainMenu extends World
     public AMainMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1410, 670, 1);   
+        super(1500, 600, 1);   
+        prepare();
     }
 
-    public void act() {
-    
-        if (Greenfoot.isKeyDown("enter"))
-            Greenfoot.setWorld(new Lvl1Temp());        
-        if (Greenfoot.isKeyDown("i"))
-            Greenfoot.setWorld(new InstructionPage());
-        if (Greenfoot.isKeyDown("c"))
-            Greenfoot.setWorld(new Credit());            
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        ButtonForStart buttonForStart = new ButtonForStart();
+        addObject(buttonForStart, 1250, 150);
+
+        ButtonForCredit buttonForCredit = new ButtonForCredit(-100);
+        addObject(buttonForCredit, 500, 400);
+
+        ButtonForInstruction buttonForInstruction = new ButtonForInstruction(-100);
+        addObject(buttonForInstruction,250, 400);
+
     }
 }

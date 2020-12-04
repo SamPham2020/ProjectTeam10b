@@ -21,9 +21,7 @@ public class Lvl2 extends MutualWorld
     
     public void act() {
         caveSound.play();
-        reset();
-        if (Greenfoot.isKeyDown("r"))
-            Greenfoot.setWorld(new Lvl2());                  
+        reset();                
     }    
 
     public void loseLife(int life) {        
@@ -33,7 +31,7 @@ public class Lvl2 extends MutualWorld
             showText("Life: " + lifeNum, 50, 50);  
         }
         if (lifeNum > 0) {
-            addObject(new Cat2(), 53,353); 
+            addObject(new Cat2(), 82, 552); 
         }
         if (lifeNum < 1) {
             showText("Game Over\nPress m to return to the main menu", 705, 335);              
@@ -49,7 +47,7 @@ public class Lvl2 extends MutualWorld
         Entrance2 entrance2 = new Entrance2();
         addObject(entrance2,1352,53);       
         Cat2 cat2 = new Cat2();
-        addObject(cat2,50,41);
+        addObject(cat2, 82, 552);
         for (int i = 0; i < 3; i++) {
             addObject(new Star(), Greenfoot.getRandomNumber(500) + 450, Greenfoot.getRandomNumber(600) + 50);   
         } 
