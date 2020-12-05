@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lvl3 here.
+ * city lvl
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham 
+ * @version 12/5/2020
  */
 public class Lvl3 extends MutualWorld
 {

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Button
+comment0.text=\r\n\ Allow\ programmers\ to\ build\ buttons\ for\ start,\ credit,\ instruction,\ and\ home\ \r\n\ @author\ Hong\ Hien\ Pham\r\n\ @version\ 12/5/2020\r\n
+comment1.params=
+comment1.target=Button()
+comment2.params=num\ sizeChange
+comment2.target=Button(int,\ int)
+comment2.text=\r\n\ Button\ constructor\ based\ on\ entered\ num\:\ \r\n\ \ \ \ \ \ 1\:\ start\r\n\ \ \ \ \ \ 2\:\ credit\r\n\ \ \ \ \ \ 3\:\ instruction\r\n\ \ \ \ \ \ 4\:\ home(return\ to\ the\ main\ menu\ +\ reset)\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Button\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment4.params=num
+comment4.target=void\ function(int)
+comment4.text=\r\n\ Give\ a\ function\ according\ for\ the\ chosen\ number\ for\ button\r\n
+numComments=5

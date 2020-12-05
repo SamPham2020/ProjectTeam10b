@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lvl3Temp here.
+ * Parent world for all levels
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien PHam, Shawn Gregory
+ * @version 12/5/2020
  */
 public class MutualWorld extends World
 {
@@ -24,7 +24,6 @@ public class MutualWorld extends World
      */
     public MutualWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1500, 600, 1); 
         showText("Life: " + lifeNum, 50, 50);
         showText("score: " + score, 150, 50);
@@ -55,41 +54,60 @@ public class MutualWorld extends World
        }
     }       
     
+    /**
+     * Play SFX when drowed
+     */
     public void drowned() {
         splashSound.play();
     }
     
+    /**
+     * Play SFX when get something
+     */
     public void gainSound() {
         get1Sound.play();
     }
     
+    /** 
+     * Play SFX when win
+     */
     public void win() {
         winSound.play();
     }
-    
+
+    /**
+     * Play SFX when get crushed
+     */
     public void squish() {
         squishedSound.play();
     }  
     
+    /**
+     * prepare for initial world
+     */
     private void prepare() {       
         for (int i = 0; i < lifeNum; i++) {
             addObject(new Heart(), 1480, 494 - i * 40);            
         }
         
-        ButtonForInstruction buttonForInstruction = new ButtonForInstruction(20);
-        addObject(buttonForInstruction,1420,567);
-        ButtonForHome buttonForHome = new ButtonForHome(20);
-        addObject(buttonForHome,1470,567);
+        Button home = new Button(4, 20);
+        addObject(home,1470, 567);  
+        
+        Button in = new Button(3, 20);
+        addObject(in,1420,567);
     }      
 
+    /**
+     * add star, score, heart(based on number of stars)
+     */
     public void addStar(int stars) { 
         starNum += stars;   
         score += 100;
         showText("score: " + score, 150, 50);
-        if (starNum == 0) {                       
-            if (lifeNum < 3) { 
-                addObject(new Heart(), 1480, 494 - lifeNum * 40);                
-                lifeNum++;
+        if (starNum == 0) {        
+            addObject(new Heart(), 1480, 414 + lifeNum * 40);              
+            if (lifeNum <= 2) {               
+                ++lifeNum;
                 showText("Life: " + lifeNum, 50, 50);
             }
         }

@@ -63,7 +63,7 @@ public class Lvl1 extends MutualWorld
 
         addObject(rock2,1081,167);
         Land land = new Land();
-        addObject(land,1439,180);
+        addObject(land,1439, 60);
         Rockx rock4 = new Rockx();
         addObject(rock4,1198,167);
         Rockx rock5 = new Rockx();
@@ -77,6 +77,6 @@ public class Lvl1 extends MutualWorld
         Star star2 = new Star();
         addObject(star2,904,107);
         Star star3 = new Star();
-        addObject(star3,1440,443);
+        addObject(star3,1440, 350);
     }
 }

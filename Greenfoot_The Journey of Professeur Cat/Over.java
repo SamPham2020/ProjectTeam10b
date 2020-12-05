@@ -15,7 +15,7 @@ public class Over extends World
     public Over()
     {    
         super(1500, 600, 1); 
-        ButtonForHome buttonForHome = new ButtonForHome(20);
-        addObject(buttonForHome,1470,567);        
+        Button home = new Button(4, 20);
+        addObject(home,1470,567);        
     }
 }

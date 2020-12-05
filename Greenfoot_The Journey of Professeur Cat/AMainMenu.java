@@ -1,16 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class AMainMenu here.
+ * Main Menu
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham
+ * @version 12/5/2020
  */
 public class AMainMenu extends World
 {
     /**
      * Constructor for objects of class AMainMenu.
-     * 
      */
     public AMainMenu()
     {    
@@ -24,14 +23,13 @@ public class AMainMenu extends World
      */
     private void prepare()
     {
-        ButtonForStart buttonForStart = new ButtonForStart();
-        addObject(buttonForStart, 1250, 150);
-
-        ButtonForCredit buttonForCredit = new ButtonForCredit(-100);
-        addObject(buttonForCredit, 500, 400);
-
-        ButtonForInstruction buttonForInstruction = new ButtonForInstruction(-100);
-        addObject(buttonForInstruction,250, 400);
-
+        Button start = new Button();
+        addObject(start, 1250, 150); 
+        
+        Button credit = new Button(2, -100);
+        addObject(credit, 500, 400);
+        
+        Button in = new Button(3, -100);
+        addObject(in, 250, 400);
     }
 }
