@@ -14,6 +14,17 @@ public class Over extends World
      */
     public Over()
     {    
-        super(1416, 672, 1);        
+        super(1416, 672, 1);
+        prepare();
+    }
+    public void prepare() {
+        Button credit = new Button(2, -100);
+        addObject(credit, 425, 450);
+        
+        Button in = new Button(3, -100);
+        addObject(in, 175, 450);
+        
+        Button home = new Button(4, 20);
+        addObject(home, 1250, 150);  
     }
 }
