@@ -62,9 +62,13 @@ public class Lvl2 extends MutualWorld
         Bat bat3 = new Bat();
         addObject(bat3,1141,21);
         Ball ball = new Ball();
-        addObject(ball,439,562);
+        addObject(ball,295,565);
         Ball ball2 = new Ball();
-        addObject(ball2,908,565);
+        addObject(ball2,545,0);
+        Ball ball3 = new Ball();
+        addObject(ball3,800,565);
+        Ball ball4 = new Ball();
+        addObject(ball4,1045,0);
     }
      
 }
