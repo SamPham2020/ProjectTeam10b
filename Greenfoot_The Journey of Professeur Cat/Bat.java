@@ -8,17 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bat extends Actor
 {
-    private int speed = 5;
+    private int movement = 0;
     /**
      * Act - do whatever the Bat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        setLocation(getX(), getY() + speed);
-        if (isAtEdge()) {
-            turn(180);
-            speed *= -1;
-        }    
+        move(5);
+        turn(Greenfoot.getRandomNumber(45) - 22);  
     }
 }

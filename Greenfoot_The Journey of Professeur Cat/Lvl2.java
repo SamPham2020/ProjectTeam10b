@@ -56,13 +56,11 @@ public class Lvl2 extends MutualWorld
             addObject(new Star(), Greenfoot.getRandomNumber(500) + 450, Greenfoot.getRandomNumber(600) + 50);   
         } 
         Bat bat = new Bat();
-        addObject(bat,213,24);
+        addObject(bat,213,124);
         Bat bat2 = new Bat();
-        addObject(bat2,670,22);
-        Bat bat3 = new Bat();
-        addObject(bat3,1141,21);
+        addObject(bat2,1190,222);
         Ball ball = new Ball();
-        addObject(ball,295,565);
+        addObject(ball,1295,565);
         Ball ball2 = new Ball();
         addObject(ball2,545,0);
         Ball ball3 = new Ball();
