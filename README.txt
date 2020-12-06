@@ -13,7 +13,7 @@ AUTHORS:
 	
  # Resources:
  	## Engine(platform): Greenfoot
-	## Graphical Design: "Paint3D Library"
+	## Graphical Design (Sprite, Objects and Backgrounds): "Paint3D Library"
 	## Sound Effects: https://freesound.org
 	
  # License: MIT License
