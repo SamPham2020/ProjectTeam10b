@@ -29,22 +29,22 @@ public class Lvl3 extends MutualWorld
      */
     public void addObstacles() {
         setPaintOrder(Instruction.class, Bridge.class, Flag.class, Cat3.class, Key.class);               
-        if (counter == 20) {         
-            if (Greenfoot.getRandomNumber(100) < 2) {   
-                addObject(new Car(), Greenfoot.getRandomNumber(60) + 720, 672);
+        if (counter == 25) {         
+            if (Greenfoot.getRandomNumber(100) < 1) {   
+                addObject(new Car(), 775, 600);
                 addObject(new Train(), 150, 0);
                 addObject(new Rock(), 520, 0);
                 addObject(new Rock(), 590, 0);
             }            
             
-            if (Greenfoot.getRandomNumber(100) < 2) {
-                addObject(new Car(), Greenfoot.getRandomNumber(60) + 920, 672);
+            if (Greenfoot.getRandomNumber(100) < 1) {
+                addObject(new Car(), 975, 600);
                 addObject(new Train(), 250, 0);
                 addObject(new Rock(), 520, 0);                
             }
     
-            if (Greenfoot.getRandomNumber(100) < 2) {
-                addObject(new Car(), Greenfoot.getRandomNumber(60) + 1120, 672);
+            if (Greenfoot.getRandomNumber(100) < 1) {
+                addObject(new Car(),1175, 600);
                 addObject(new Rock(), 1350, 0);
                 addObject(new Train(), 350, 0);      
             }
@@ -66,10 +66,10 @@ public class Lvl3 extends MutualWorld
 
         for (int i = 0; i < 3; i++) {
             addObject(new Road(), 750 + 200 * i, 300);
-            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(50), Greenfoot.getRandomNumber(80) + 50);
-            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(80) + 190);
-            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(80) + 340);   
-            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(50), Greenfoot.getRandomNumber(80) + 460);
+            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(20), Greenfoot.getRandomNumber(80) + 50);    
+            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(80) + 190);            
+            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(20) + 340);   
+            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(20), Greenfoot.getRandomNumber(80) + 460);
             addObject(new Bridge(0), 750 + 200 * i, 25);
         }
  

@@ -15,5 +15,8 @@ public class Rock extends Obstacles
     public void act() 
     {
         movement(3);
+        if (isAtEdge()) {
+            getWorld().removeObject(this); 
+        }          
     }    
 }

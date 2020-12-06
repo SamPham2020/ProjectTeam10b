@@ -13,10 +13,7 @@ public class Obstacles extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void movement(int delta) 
-    {
-        setLocation(getX(), getY() + delta); 
-        if (isAtEdge()) {
-            getWorld().removeObject(this); 
-        }        
+    {  
+        setLocation(getX(), getY() + delta);      
     }    
 }

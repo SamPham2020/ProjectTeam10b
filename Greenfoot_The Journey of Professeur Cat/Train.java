@@ -27,6 +27,9 @@ public class Train extends Obstacles
     {
         movement(3);
         switchTrainImg();
+        if (isAtEdge()) {
+            getWorld().removeObject(this); 
+        }          
     }
     
     public void switchTrainImg() {

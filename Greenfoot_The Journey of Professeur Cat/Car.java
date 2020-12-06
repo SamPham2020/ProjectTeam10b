@@ -14,6 +14,9 @@ public class Car extends Obstacles
      */
     public void act() 
     {
-        movement(-1);
+        movement(-3);
+        if(getY() == 50) {
+            getWorld().addObject(new Car(), getX(), 600);
+        }
     }    
 }
