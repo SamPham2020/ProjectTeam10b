@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lvl3 extends MutualWorld
 {
+    private int counter = 0;
     private GreenfootSound carSound = new GreenfootSound("Car_passby.wav"); 
      
     /**
@@ -30,6 +31,7 @@ public class Lvl3 extends MutualWorld
     public void addObstacles() {
         setPaintOrder(Instruction.class, Bridge.class, Flag.class, Cat3.class, Key.class);               
         if (counter == 25) {         
+            
             if (Greenfoot.getRandomNumber(100) < 1) {   
                 addObject(new Car(), 775, 600);
                 addObject(new Train(), 150, 0);

@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MutualCat extends Actor
 {
     private boolean isDown;
-    public int speed = 4;
-    public int counter = 0;
+    protected int speed = 4;
+    private int counter = 0;
     protected int iCorrectForKey = 0;
     protected GreenfootImage stand = null;
     protected GreenfootImage run1 = null;

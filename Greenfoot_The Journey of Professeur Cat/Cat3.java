@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cat3 extends MutualCat
 {
+    private int counter;
     /**
      * Act - do whatever the Cat3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -62,7 +63,8 @@ public class Cat3 extends MutualCat
             if (counter == 25) {                
                 myworld.loseLife(1);
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
-                getWorld().removeObject(this);   
+                getWorld().removeObject(this); 
+                counter = 0;
             }
             else
                 counter++;
