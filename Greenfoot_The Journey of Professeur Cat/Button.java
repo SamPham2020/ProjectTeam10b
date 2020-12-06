@@ -67,8 +67,8 @@ public class Button extends Actor
     {           
         //pressed
         if (!mouseDown && Greenfoot.mousePressed(this)) {
-            setImage(button2);
-            mouse.play();            
+            mouse.play();                  
+            setImage(button2);      
             mouseDown = true;
         }
         //released

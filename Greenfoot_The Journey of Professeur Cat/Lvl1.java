@@ -62,8 +62,6 @@ public class Lvl1 extends MutualWorld
         removeObject(rock2);
 
         addObject(rock2,1081,167);
-        Land land = new Land();
-        addObject(land,1439, 60);
         Rockx rock4 = new Rockx();
         addObject(rock4,1198,167);
         Cat cat = new Cat();
@@ -79,7 +77,6 @@ public class Lvl1 extends MutualWorld
         addObject(star2,904,107);
         Star star3 = new Star();
         addObject(star3,1239, 517);
-        removeObject(land);
 
         island32.setLocation(1436,38);
         island32.setLocation(1446,79);

@@ -42,7 +42,7 @@ public class Cat extends MutualCat
             setLocation(getX(), getY() + Rockx.getSpeed());
             getWorld().setPaintOrder(Instruction.class, Cat.class);
         }
-        else if(!isTouching(Island1.class) && !isTouching(Island2.class) && !isTouching(Island3.class) && !isTouching(Land.class) &&
+        else if(!isTouching(Island1.class) && !isTouching(Island2.class) && !isTouching(Island3.class) &&
         !isTouching(Rockx.class)){
             stand = new GreenfootImage("graycatdrowed2.png");
             getWorld().setPaintOrder(Rockx.class);
