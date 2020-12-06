@@ -20,11 +20,12 @@ public class Lvl1 extends MutualWorld
     }
     
      public void act() {
-        int timer = 0;
-        while(timer % 2 == 0) { 
-            wavesSound.play();
-            timer++;
-        }       
+        //int timer = 0;
+        //while(timer % 2 == 0) { 
+        //    wavesSound.play();
+        //    timer++;
+        //}
+        wavesSound.play();
     }    
     
     public void loseLife(int life) {        

@@ -9,6 +9,7 @@ public class Button extends Actor
 {
     private GreenfootImage button1;
     private GreenfootImage button2;
+    private GreenfootSound mouse = new GreenfootSound("MouseClicked.wav");
     private boolean mouseDown;    
     private int num;
    
@@ -67,6 +68,7 @@ public class Button extends Actor
         //pressed
         if (!mouseDown && Greenfoot.mousePressed(this)) {
             setImage(button2);
+            mouse.play();            
             mouseDown = true;
         }
         //released

@@ -18,13 +18,13 @@ public class Over extends World
         prepare();
     }
     public void prepare() {
-        Button credit = new Button(2, -100);
-        addObject(credit, 425, 450);
+        Button credit = new Button(2, -50);
+        addObject(credit, 1050, 150);
         
-        Button in = new Button(3, -100);
-        addObject(in, 175, 450);
+        Button in = new Button(3, -50);
+        addObject(in, 1200, 150);
         
-        Button home = new Button(4, 20);
-        addObject(home, 1250, 150);  
+        Button home = new Button(4, -50);
+        addObject(home, 1350, 150);  
     }
 }
