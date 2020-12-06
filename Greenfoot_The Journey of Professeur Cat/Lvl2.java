@@ -31,8 +31,7 @@ public class Lvl2 extends MutualWorld
     public void loseLife(int life) {        
         if (lifeNum > 0) {
             squish();
-            lifeNum -= life;
-            showText("Life: " + lifeNum, 50, 50);  
+            lifeNum -= life;  
         }
         if (lifeNum > 0) {
             addObject(new Cat2(), 82, 552); 

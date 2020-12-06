@@ -25,15 +25,14 @@ public class MutualWorld extends World
     public MutualWorld()
     {    
         super(1500, 600, 1); 
-        showText("Life: " + lifeNum, 50, 50);
-        showText("score: " + score, 150, 50);
+        showText("Score: " + score, 75, 25);
         prepare();
     }
     
     protected void addKey(int keys) { 
         keyNum += keys;          
         score += 100;
-        showText("score: " + score, 150, 50);
+        showText("Score: " + score, 75, 25);
         gainSound();
         if (keyNum == 0)
             addObject(new House(), 1450, 50);
@@ -43,8 +42,7 @@ public class MutualWorld extends World
     public void loseLife(int life) {        
         if (lifeNum > 0) {
            loseSound.play();
-            lifeNum -= life;
-            showText("Life:" + lifeNum, 50, 50);  
+           lifeNum -= life;
        }
        if (lifeNum > 0) {
             addObject(new Cat3(), 41, 296); 
@@ -111,12 +109,11 @@ public class MutualWorld extends World
     public void addStar(int stars) { 
         starNum += stars;   
         score += 100;
-        showText("score: " + score, 150, 50);
-        if (starNum == 0) {        
-            addObject(new Heart(), 1480, 414 + lifeNum * 40);              
-            if (lifeNum <= 2) {               
-                ++lifeNum;
-                showText("Life: " + lifeNum, 50, 50);
+        showText("Score: " + score, 75, 25);
+        if (starNum == 0) {                   
+            if (lifeNum < 3) {       
+                addObject(new Heart(), 1480, 414 + lifeNum * 40);                   
+                lifeNum++;
             }
         }
     }       

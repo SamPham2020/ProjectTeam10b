@@ -32,7 +32,6 @@ public class Lvl1 extends MutualWorld
         if (lifeNum > 0) {
             loseSound.play();
             lifeNum -= life;
-            showText("Life: " + lifeNum, 50, 50);  
         }
         if (lifeNum > 0) {
             addObject(new Cat(), 122,129); 
@@ -67,17 +66,25 @@ public class Lvl1 extends MutualWorld
         addObject(land,1439, 60);
         Rockx rock4 = new Rockx();
         addObject(rock4,1198,167);
-        Rockx rock5 = new Rockx();
-        addObject(rock5,1315,167);
         Cat cat = new Cat();
         addObject(cat,122,129);
+        Island3 island32 = new Island3();
+        addObject(island32,1415,0);        
         Entrance2 entrance2 = new Entrance2();
-        addObject(entrance2,1444,43);
+        addObject(entrance2,1444,80);
+        entrance2.setRotation(40);        
         Star star = new Star();
         addObject(star,536,299);
         Star star2 = new Star();
         addObject(star2,904,107);
         Star star3 = new Star();
-        addObject(star3,1440, 350);
+        addObject(star3,1239, 517);
+        removeObject(land);
+
+        island32.setLocation(1436,38);
+        island32.setLocation(1446,79);
+        island32.setLocation(1456,81);
+        island32.setLocation(1437,78);
+        island32.setLocation(1415,81);
     }
 }
