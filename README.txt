@@ -16,6 +16,16 @@ AUTHORS:
 	## Graphical Design (Sprite, Objects and Backgrounds): "Paint3D Library"
 	## Sound Effects: https://freesound.org
 	
+ # Road Map:
+	## Add educational purpose: coins can be replaced as letters, so kids who play the game can learn about spelling 
+	## More characters 
+	## More levels 
+	## Make the duration longer
+	## Add weather features (rain, snow, heat)
+	## Add more obstacles
+	## Add more movement’ feature(s)
+	## Add more soundtracks
+
  # License: MIT License
 
 Copyright (c) [2020] [Hong Hien Pham, Krikor Astour, Shawn Gregory]
