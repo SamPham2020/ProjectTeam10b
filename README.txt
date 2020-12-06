@@ -2,33 +2,39 @@ ProjectTeam10b
 PROJECT TITLE: The JourNey of the Professeur Cat  
 PURPOSE OF PROJECT: Team Project
 VERSION or DATE: 12/5/2020
-AUTHORS: Shawn Gregory, Krikor Astour, Hong Hien Pham
-HOW TO START THIS PROJECT: 
-		Open "Greenfoot_The Journey of Professeur Cat" folder
-		Search for "Project" file and open it 
-		Press run to start the greenfoot 
+AUTHORS: 
+	 - Shawn Gregory
+	 - Krikor Astour
+	 - Hong Hien Pham
 
-Game Overview: 
-	Cat get lost during sea trip. While owner looks the other way, cat get carried by the wave to a small island. 
-	Cat must find its ways home with 3 lives:  
-
-***For the first 2 levels: Cat can collect coins to increase number of lives (3 coins = 1 life if (life < 3))
-	Lvl1: Cross the sea 
-		Avoid Sharks’ attacks  
-		Step on float to cross to the other side and enter the cave   
-		Lose condition(s): fall to sea  
-		To go through this level: Reach the cave at the other side 
-
-	Lvl2: Go through the cave  
-		Avoid rocks’ roll 
-		Avoid bats  
-		Lose condition(s): Touch rock and touch bats 
-		To win this level: reach the other entrance of the cave at the other side  
-
-
-	Lvl3: Cross the street  
-	Collect all keys (3 or to be decided)) to make the house appeared.  
-		Game loses condition(s): fall into river, crushed by car, crushed by train. 
-		Final win: reach house  
+ # Contributing:
+ 	Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change,
+	or you can always contact one of the authors.
 	
+ # Resources:
+ 	## Engine(platform): Greenfoot
+	## Graphical Design: "Paint3D Library"
+	## Sound Effects: https://freesound.org
+	
+ # License: MIT License
+
+Copyright (c) [2020] [Hong Hien Pham, Krikor Astour, Shawn Gregory]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 	
