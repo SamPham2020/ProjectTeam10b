@@ -6,14 +6,27 @@ all he/she needs to know. The comments should usually include at least:
 
 PROJECT TITLE: The Journey of the Professeur Cat
 PURPOSE OF PROJECT: Team Project
-VERSION or DATE:1.0
-HOW TO START THIS PROJECT:
+VERSION or DATE: Alpha
+HOW TO START THIS PROJECT: Press the "RUN" button and follow the instructions below:
+  * Level 1:
+      1- Use the floating rocks to jump from an island to another.
+      2- Do not fall into the water.
+      3- Collect the stars
+      4- Enter the cave enterance to go to the second level.
+  * Level 2:
+      1- Run away from the bats.
+      2- Avoid getting hit by the balls
+      3- Collect the stars
+      4- Exit from the cave to start the next level.
+  * Level 3:
+      1- Avoid the train
+      2- Wait for the floating rocks to help you pass the river.
+      3- DO not let the cars hit you
+      4- Collect the keys
+      5- Finally, help the cat enter the house
+      
 AUTHORS: Shawn Gregory, Astour Krikor, Hong Hien Pham
-1.0: add world and add 1 cat (testing)
-1.1: short version of the game to test the mechanics 
-1.2: add loselife and endgame functions to the short version of the game 
-1.3: add temporary character for lvl transition 
-1.4: polish lv 3, relating and merging worlds(2 and 3)
+
 
 
 MIT License
