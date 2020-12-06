@@ -1,20 +1,23 @@
-Please write your sources(where you found the pics or sounds) since teacher has mentioned it in class: 
 Pics: 
 1) Dogs' and Cats' sprites: 
-Link: https://www.gameart2d.com/cat-and-dog-free-sprites.html
-Lisence: Creative Common Zero (CC0) a.k.a Public Domain license
-License Link: https://www.gameart2d.com/license.html
-2)Tree Branch
-Link: https://craftpix.net/freebies/free-jump-game-items/
-License Link: https://craftpix.net/file-licenses/
-3) Roads
-Link: https://itch.io/game-assets/free/tag-road
+  Link: https://www.gameart2d.com/cat-and-dog-free-sprites.html
+  Lisence: Creative Common Zero (CC0) a.k.a Public Domain license
+  License Link: https://www.gameart2d.com/license.html
+2) Other visuals assets were created by Astour Krikor, Shawn Gregory, and Hong Hien Pham
+   Using Paint 3D software of Microsoft 
 
 Sounds:
-1) Car passing by:https://freesound.org/people/961_Studios/sounds/244407/
-This work is licensed under the Creative Commons 0 License.
-2) Horror Splat with Juicy Squish by freesfx
-https://www.freesfx.co.uk/sfx/squish
-3) Train sound: https://freesound.org/people/theshaggyfreak/sounds/278885/
-4) Victory Cry: https://freesound.org/people/theshaggyfreak/sounds/278885/
-5) Game Over: https://freesound.org/people/myfox14/sounds/382310/download/382310__myfox14__game-over-arcade.wav
+1) "Car passing.wav" by 961_Studios
+Link: https://freesound.org/people/961_Studios/sounds/244407
+2) "Horror Splat with Juicy Squish" by freesfx.co.uk
+Link: https://www.freesfx.co.uk/sfx/squish
+3) "Train Whistle" by theshaggyfreak
+Link: https://freesound.org/people/theshaggyfreak/sounds/278885/
+4) "VICTORY CRY REVERB 2.wav" by chripei
+Link: https://freesound.org/people/chripei/sounds/165491/?page=2
+5) "Game Over Arcade" by myfox14
+Link: https://freesound.org/people/myfox14/sounds/382310/download/382310__myfox14__game-over-arcade.wav
+6) Light Waves Coming In by freesfx.co.uk
+Link: https://freesfx.co.uk/sfx/light-wave-
+7) Moving a boulder by BW_Clowes
+Link: https://freesound.org/people/BW_Clowes/sounds/128126/#
