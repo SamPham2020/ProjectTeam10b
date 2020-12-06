@@ -11,19 +11,19 @@ HOW TO START THIS PROJECT: Press the "RUN" button and follow the instructions be
   * Level 1:
       1- Use the floating rocks to jump from an island to another.
       2- Do not fall into the water.
-      3- Collect the stars
+      3- Collect the stars.
       4- Enter the cave enterance to go to the second level.
   * Level 2:
       1- Run away from the bats.
-      2- Avoid getting hit by the balls
-      3- Collect the stars
+      2- Avoid getting hit by the balls.
+      3- Collect the stars.
       4- Exit from the cave to start the next level.
   * Level 3:
-      1- Avoid the train
+      1- Avoid the train.
       2- Wait for the floating rocks to help you pass the river.
-      3- DO not let the cars hit you
-      4- Collect the keys
-      5- Finally, help the cat enter the house
+      3- DO not let the cars hit you.
+      4- Collect the keys.
+      5- Finally, help the cat enter the house.
       
 AUTHORS: Shawn Gregory, Astour Krikor, Hong Hien Pham
 
