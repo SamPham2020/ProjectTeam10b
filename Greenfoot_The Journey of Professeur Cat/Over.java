@@ -14,7 +14,7 @@ public class Over extends World
      */
     public Over()
     {    
-        super(1416, 672, 1);
+        super(1500, 600, 1);
         prepare();
     }
     public void prepare() {
