@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MutualWorld extends World
 {
-    protected int counter = 0;
     protected int keyNum = 3;  
     protected int starNum = 3;    
     protected static int score = 0; 
@@ -83,7 +82,8 @@ public class MutualWorld extends World
     /**
      * prepare for initial world
      */
-    private void prepare() {   
+    private void prepare() {
+        //avoid hearts' position drop
         if (lifeNum != 2) {
             for (int i = 0; i < lifeNum; i++) {
                 addObject(new Heart(), 1480, 494 - i * 40);            

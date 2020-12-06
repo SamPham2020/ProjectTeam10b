@@ -9,8 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cat extends MutualCat
 {
     private boolean isDown;
-    private int speed = 4;
-    private int speedOnRock = 3;
     private int counter = 0;
     private GreenfootImage stand = null;
     private GreenfootImage run1 = null;
@@ -65,61 +63,11 @@ public class Cat extends MutualCat
             myworld.loseLife(1);
             getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
             getWorld().removeObject(this);   
+            counter = 0;
         }
         else
             counter++;
         }     
-    }    
-
-    /**
-     * checks if the character is moving
-     */
-    public Boolean isMove() {
-        if (speed == 4 && isDown == true)
-            return true;
-        else
-            return false;
-    }
-    
-    public void switchImage() {
-        if (getImage() == run1) {
-            if (counter == 10) {
-                setImage(run2);
-                counter = 0;
-            }
-            else
-            counter += 1;
-        }
-        else {
-            if (counter == 10) {
-                setImage(run1);
-                counter = 0;
-            }
-            else
-                counter += 1;
-            }
-        }
-        
-    public void movement() {
-        if (Greenfoot.isKeyDown("up")) {
-            setLocation(getX(), getY() - speed);
-            isDown = true;
-        }
-        else if (Greenfoot.isKeyDown("down")) {
-            setLocation(getX(), getY() + speed);
-            isDown = true;
-        }
-        else if (Greenfoot.isKeyDown("left")) {
-            setLocation(getX() - speed, getY());
-            isDown = true;
-        }
-        else if (Greenfoot.isKeyDown("right")) {
-            setLocation(getX() + speed, getY());
-            isDown = true;
-        }
-        else
-            isDown = false;
-    }
-            
+    }         
 }
     
