@@ -85,10 +85,18 @@ public class MutualWorld extends World
     /**
      * prepare for initial world
      */
-    private void prepare() {       
-        for (int i = 0; i < lifeNum; i++) {
-            addObject(new Heart(), 1480, 494 - i * 40);            
+    private void prepare() {   
+        if (lifeNum != 2) {
+            for (int i = 0; i < lifeNum; i++) {
+                addObject(new Heart(), 1480, 494 - i * 40);            
+            }
         }
+        else {
+            for (int i = 0; i < lifeNum; i++) {
+                addObject(new Heart(), 1480, 494 - (i + 1) * 40);            
+            }        
+        }
+        
         
         Button home = new Button(4, 20);
         addObject(home,1470, 567);  
