@@ -1,7 +1,7 @@
 ProjectTeam10b
 PROJECT TITLE: The JourNey of the Professeur Cat  
 PURPOSE OF PROJECT: Team Project
-VERSION or DATE: 12/5/2020
+VERSION or DATE: Alpha
 AUTHORS: 
 	 - Shawn Gregory
 	 - Krikor Astour
