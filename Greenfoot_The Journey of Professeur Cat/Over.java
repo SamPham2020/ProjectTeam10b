@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Over extends World
 {
+    private GreenfootImage score = new GreenfootImage("" + MutualWorld.score, 120, new Color(255, 202, 24), new Color(0, 0, 0, 0));
     /**
      * Constructor for objects of class Over.
      * 
@@ -18,7 +19,7 @@ public class Over extends World
         prepare();
     }
     public void prepare() {
-        showText("" + MutualWorld.score, 350, 262);
+        getBackground().drawImage(score, 350,200);
         Button credit = new Button(2, -50);
         addObject(credit, 1050, 150);
         

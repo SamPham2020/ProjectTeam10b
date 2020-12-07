@@ -31,6 +31,11 @@ public class Lvl3 extends MutualWorld
     public void addObstacles() {
         setPaintOrder(Instruction.class, Bridge.class, Flag.class, Cat3.class, Key.class);               
         if (counter == 25) {         
+            if (Greenfoot.getRandomNumber(100) < 7) {  
+                addObject(new Rock(), 1350, 0);
+                addObject(new Rock(), 520, 0);
+                addObject(new Rock(), 590, 0);                
+            }            
             
             if (Greenfoot.getRandomNumber(100) < 1) {   
                 addObject(new Car(), 775, 600);

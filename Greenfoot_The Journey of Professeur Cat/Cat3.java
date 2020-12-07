@@ -9,15 +9,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cat3 extends MutualCat
 {
     private int counter;
+    private static int x;
+    private static int y;
+    private GreenfootSound eagle = new GreenfootSound("Eagle.wav");
     /**
      * Act - do whatever the Cat3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+        x = getX();
+        y = getY();
         movement();
         encounter();        
     }    
+    
+    public static int getCat3XPos() {
+        return x;
+    }
+
+    public static int getCat3YPos() {
+        return y;
+    }
     
     /**
      * Interaction between cat3 and other objects and the consequences of lv3
@@ -31,6 +44,18 @@ public class Cat3 extends MutualCat
             stand = new GreenfootImage("squishedCat4.png");
             speed = 0;
         }   
+        
+        //when eagle appears
+        if (getX() == 425) {
+            eagle.play();
+            getWorld().addObject(new Eagle(), 1500, 400);
+        }
+        
+        //if touch eagle
+        if (isTouching(Eagle.class)) {
+            speed = 0;
+            getWorld().removeObjects(getWorld().getObjects(Eagle.class));            
+        }
         
         // if touch river
         if (getX() > 1320 && getX() < 1390  || getX() > 500 && getX() < 605) {
@@ -60,7 +85,7 @@ public class Cat3 extends MutualCat
         }
         // if lose life 
         if (speed == 0 &&  !isTouching(House.class)){  
-            if (counter == 25) {                
+            if (counter == 5) {                
                 myworld.loseLife(1);
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this); 
