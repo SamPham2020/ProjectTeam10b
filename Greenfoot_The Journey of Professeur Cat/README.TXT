@@ -1,13 +1,14 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
 PROJECT TITLE: The Journey of the Professeur Cat
 PURPOSE OF PROJECT: Team Project
 VERSION or DATE: Alpha
+AUTHORS: Shawn Gregory, Astour Krikor, Hong Hien Pham
 HOW TO START THIS PROJECT: Press the "RUN" button and follow the instructions below:
+
+How to move: use arrows(up, down, left, right) and press space to speed up
+
+About Game: 
+	Goal: Cat needs to get back home 
+	** Collect 3 coins to increase life 
   * Level 1:
       1- Use the floating rocks to jump from an island to another.
       2- Do not fall into the water.
@@ -24,10 +25,6 @@ HOW TO START THIS PROJECT: Press the "RUN" button and follow the instructions be
       3- DO not let the cars hit you.
       4- Collect the keys.
       5- Finally, help the cat enter the house.
-      
-AUTHORS: Shawn Gregory, Astour Krikor, Hong Hien Pham
-
-
 
 MIT License
 
