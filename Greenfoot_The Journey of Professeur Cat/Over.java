@@ -18,6 +18,7 @@ public class Over extends World
         prepare();
     }
     public void prepare() {
+        showText("" + MutualWorld.score, 350, 262);
         Button credit = new Button(2, -50);
         addObject(credit, 1050, 150);
         
