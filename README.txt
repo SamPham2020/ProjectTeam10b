@@ -14,7 +14,7 @@ AUTHORS:
  # Resources:
  	## Engine(platform): Greenfoot
 	## Graphical Design (Sprite, Objects and Backgrounds): "Paint3D Library"
-	## Sound Effects: https://freesound.org
+	## Sound Effects: https://freesound.org, freefx.co.uk
 	
  # Road Map:
 	## Add educational purpose: coins can be replaced as letters, so kids who play the game can learn about spelling 
