@@ -15,6 +15,8 @@ public class Bat extends Actor
      */
     public void act() 
     {
+        if(getX() < 250)
+            move(-120);
         move(5);
         turn(Greenfoot.getRandomNumber(45) - 22);  
     }
