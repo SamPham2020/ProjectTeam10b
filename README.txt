@@ -13,7 +13,8 @@ AUTHORS:
 	
  # Resources:
  	## Engine(platform): Greenfoot
-	## Graphical Design (Sprite, Objects and Backgrounds): "Paint3D"
+	## Sprites: Game Art 2D
+	## Graphical Design (Objects and Backgrounds): Created by using Paint3D software 
 	Please send us a DMCA Take-Down Notice if we have infringes on any creator' rights
 	We will remove the assets immediately and investigate on the matters. 
 	## Sound Effects: https://freesound.org, freefx.co.uk
