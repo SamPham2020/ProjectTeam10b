@@ -12,11 +12,11 @@ AUTHORS:
 	or you can always contact one of the authors.
 	
  # Resources:
+ 	Please send us a DMCA Take-Down Notice if we have infringes on any creator' rights
+	We will remove the assets immediately and investigate on the matters. 
  	## Engine(platform): Greenfoot
 	## Sprites: Game Art 2D
 	## Graphical Design (Objects and Backgrounds): Created by using Paint3D software by Microsoft
-	Please send us a DMCA Take-Down Notice if we have infringes on any creator' rights
-	We will remove the assets immediately and investigate on the matters. 
 	## Sound Effects: https://freesound.org, freefx.co.uk
 	
  # Road Map:
