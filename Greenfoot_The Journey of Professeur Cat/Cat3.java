@@ -11,7 +11,6 @@ public class Cat3 extends MutualCat
     private int counter;
     private static int x;
     private static int y;
-    private GreenfootSound eagle = new GreenfootSound("Eagle.wav");
     /**
      * Act - do whatever the Cat3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -45,16 +44,10 @@ public class Cat3 extends MutualCat
             speed = 0;
         }   
         
-        //when eagle appears
-        if (getX() == 425) {
-            eagle.play();
-            getWorld().addObject(new Eagle(), 1500, 400);
-        }
-        
         //if touch eagle
         if (isTouching(Eagle.class)) {
-            speed = 0;
-            getWorld().removeObjects(getWorld().getObjects(Eagle.class));            
+            stand = new GreenfootImage("Dead.png");
+            speed = 0;        
         }
         
         // if touch river
@@ -87,6 +80,7 @@ public class Cat3 extends MutualCat
         if (speed == 0 &&  !isTouching(House.class)){  
             if (counter == 5) {                
                 myworld.loseLife(1);
+                getWorld().removeObjects(getWorld().getObjects(Eagle.class)); 
                 getWorld().removeObject(getWorld().getObjects(Heart.class).get(0));            
                 getWorld().removeObject(this); 
                 counter = 0;

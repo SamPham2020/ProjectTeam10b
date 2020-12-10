@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lvl3 extends MutualWorld
 {
     private int counter = 0;
+    private int timer = 500;
     private GreenfootSound carSound = new GreenfootSound("Car_passby.wav"); 
-     
+    private GreenfootSound eagle = new GreenfootSound("Eagle.wav");     
     /**
      * Constructor for objects of class Lvl3.
      * 
@@ -22,14 +23,27 @@ public class Lvl3 extends MutualWorld
     
     public void act() {
         addObstacles();   
-        carSound.play();     
+        carSound.play(); 
+        
+        //For GamePlay's presentation only (will be remove after)
+        if (Greenfoot.isKeyDown("r")) {
+            Greenfoot.setWorld(new Lvl3()); 
+            lifeNum = 3;
+        }        
     }    
         
     /**
      * Add obstacles 
      */
     public void addObstacles() {
-        setPaintOrder(Instruction.class, Bridge.class, Flag.class, Cat3.class, Key.class);               
+        setPaintOrder(Instruction.class, GameOverLose.class, Eagle.class, Bridge.class, Flag.class, Cat3.class, Key.class);               
+        if (timer == 0 && lifeNum > 0) {
+            addObject(new Eagle(), 1500, 0);
+            eagle.play();
+            timer = 500;
+        }
+        else 
+            timer--;
         if (counter == 25) {         
             if (Greenfoot.getRandomNumber(100) < 7) {  
                 addObject(new Rock(), 1350, 0);

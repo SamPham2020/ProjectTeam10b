@@ -34,16 +34,16 @@ public class Cat extends MutualCat
             setImage(stand);
         if (isTouching(Island1.class)) {
             setLocation(getX(), getY());
-            getWorld().setPaintOrder(Instruction.class, Cat.class);
+            getWorld().setPaintOrder(Instruction.class, GameOverLose.class, Star.class, Cat.class);
         }
         if (isTouching(Rockx.class) && speed != 0) {
             setLocation(getX(), getY() + Rockx.getSpeed());
-            getWorld().setPaintOrder(Instruction.class, Cat.class);
+            getWorld().setPaintOrder(Instruction.class, GameOverLose.class, Star.class, Cat.class);
         }
         else if(!isTouching(Island1.class) && !isTouching(Island2.class) && !isTouching(Island3.class) &&
         !isTouching(Rockx.class)){
             stand = new GreenfootImage("graycatdrowed2.png");
-            getWorld().setPaintOrder(Rockx.class);
+            getWorld().setPaintOrder(Instruction.class, GameOverLose.class, Star.class, Rockx.class);
             speed = 0;
         }
         if (isTouching(Star.class)) {

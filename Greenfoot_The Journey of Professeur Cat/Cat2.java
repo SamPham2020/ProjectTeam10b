@@ -24,7 +24,7 @@ public class Cat2 extends MutualCat
      */    
     private void encounter() {
        if (isTouching(Ball.class) || isTouching(Bat.class)) {
-           getWorld().setPaintOrder(Ball.class, Bat.class);
+           getWorld().setPaintOrder(Instruction.class, GameOverLose.class, Ball.class, Bat.class);
            stand = new GreenfootImage("squishedCat4.png");
            speed = 0;
        }   

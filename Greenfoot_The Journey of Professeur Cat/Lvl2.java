@@ -25,7 +25,13 @@ public class Lvl2 extends MutualWorld
          * or we can make the audio button/option for user later
          */ 
         caveSound.setVolume(50);
-        caveSound.play();         
+        caveSound.play();      
+        
+        //For GamePlay's presentation only (will be remove after)
+        if (Greenfoot.isKeyDown("r")) {
+            Greenfoot.setWorld(new Lvl2()); 
+            lifeNum = 3;
+        }        
     }    
 
     public void loseLife(int life) {        
@@ -55,7 +61,7 @@ public class Lvl2 extends MutualWorld
             addObject(new Star(), Greenfoot.getRandomNumber(500) + 450, Greenfoot.getRandomNumber(600) + 50);   
         } 
         Bat bat = new Bat();
-        addObject(bat,213,124);
+        addObject(bat,300,124);
         Bat bat2 = new Bat();
         addObject(bat2,1190,222);
         Ball ball = new Ball();

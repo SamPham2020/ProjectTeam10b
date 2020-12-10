@@ -20,7 +20,7 @@ About Game:
       3- Collect the stars.
       4- Exit from the cave to start the next level.
   * Level 3:
-      1- Avoid the train.
+      1- Avoid the train and eagle
       2- Wait for the floating rocks to help you pass the river.
       3- DO not let the cars hit you.
       4- Collect the keys.

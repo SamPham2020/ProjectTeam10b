@@ -8,9 +8,6 @@ import java.util.List;
  */
 public class Eagle extends Actor
 {
-    public Eagle() {
-        setRotation(60);
-    }
     
     /**
      * Act - do whatever the Eagle wants to do. This method is called whenever
@@ -20,5 +17,7 @@ public class Eagle extends Actor
     {
        turnTowards(Cat3.getCat3XPos(), Cat3.getCat3YPos());
        move(2);
+       if (getX() < 1500)
+            turn(180);
     }    
 }

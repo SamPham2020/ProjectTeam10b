@@ -26,6 +26,14 @@ public class Lvl1 extends MutualWorld
         //    timer++;
         //}
         wavesSound.play();
+        
+        //For GamePlay's presentation only (will be remove after)
+        if (Greenfoot.isKeyDown("r")) {
+            Greenfoot.setWorld(new Lvl1()); 
+            score = 0;
+            lifeNum = 3;
+        }
+            
     }    
     
     public void loseLife(int life) {        
@@ -46,13 +54,13 @@ public class Lvl1 extends MutualWorld
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
-    {
+    {     
         Island1 island1 = new Island1();
         addObject(island1,125,161);
         Rockx rock = new Rockx();
         addObject(rock,261,167);
         Island3 island3 = new Island3();
-        addObject(island3,490,320);
+        addObject(island3,490,320);       
         Rockx rock2 = new Rockx();
         addObject(rock2,1264,167);
         Rockx rock3 = new Rockx();
@@ -60,8 +68,8 @@ public class Lvl1 extends MutualWorld
         Island2 island2 = new Island2();
         addObject(island2,893,195);
         removeObject(rock2);
-
         addObject(rock2,1081,167);
+       
         Rockx rock4 = new Rockx();
         addObject(rock4,1198,167);
         Cat cat = new Cat();
@@ -76,7 +84,7 @@ public class Lvl1 extends MutualWorld
         Star star2 = new Star();
         addObject(star2,904,107);
         Star star3 = new Star();
-        addObject(star3,1239, 517);
+        addObject(star3,1239, 517);     
 
         island32.setLocation(1436,38);
         island32.setLocation(1446,79);
