@@ -12,6 +12,7 @@ public class Lvl3 extends MutualWorld
     private int timer = 500;
     private GreenfootSound carSound = new GreenfootSound("Car_passby.wav"); 
     private GreenfootSound eagle = new GreenfootSound("Eagle.wav");     
+    private GreenfootSound train = new GreenfootSound("train.wav");
     /**
      * Constructor for objects of class Lvl3.
      * 
@@ -52,6 +53,7 @@ public class Lvl3 extends MutualWorld
             }            
             
             if (Greenfoot.getRandomNumber(100) < 1) {   
+                train.play();
                 addObject(new Car(), 775, 600);
                 addObject(new Train(), 150, 0);
                 addObject(new Rock(), 520, 0);
@@ -59,12 +61,14 @@ public class Lvl3 extends MutualWorld
             }            
             
             if (Greenfoot.getRandomNumber(100) < 1) {
+                train.play();
                 addObject(new Car(), 975, 600);
                 addObject(new Train(), 250, 0);
                 addObject(new Rock(), 520, 0);                
             }
     
             if (Greenfoot.getRandomNumber(100) < 1) {
+                train.play();
                 addObject(new Car(),1175, 600);
                 addObject(new Rock(), 1350, 0);
                 addObject(new Train(), 350, 0);      

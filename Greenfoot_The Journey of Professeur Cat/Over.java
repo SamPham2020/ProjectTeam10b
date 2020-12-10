@@ -21,11 +21,8 @@ public class Over extends World
     public void prepare() {
         getBackground().drawImage(score, 350,200);
         Button credit = new Button(2, -50);
-        addObject(credit, 1050, 150);
-        
-        Button in = new Button(3, -50);
-        addObject(in, 1200, 150);
-        
+        addObject(credit, 1150, 150);
+   
         Button home = new Button(4, -50);
         addObject(home, 1350, 150);  
     }
