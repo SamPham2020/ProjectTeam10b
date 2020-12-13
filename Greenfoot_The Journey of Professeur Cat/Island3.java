@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Island3 here.
+ * the class of the island3
  * 
- * @author (your name) 
+ * @author Krikor Astour 
  * @version (a version number or a date)
  */
 public class Island3 extends Actor
