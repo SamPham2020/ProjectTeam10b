@@ -35,7 +35,10 @@ public class Lvl1 extends MutualWorld
         }
             
     }    
-    
+    /**
+     * to check and update the number of lives
+     * to reset the position of the cat or show the game over onject based on the number of lives
+     */
     public void loseLife(int life) {        
         if (lifeNum > 0) {
             loseSound.play();

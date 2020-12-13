@@ -8,6 +8,7 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=life
 comment3.target=void\ loseLife(int)
+comment3.text=\r\n\ to\ check\ and\ update\ the\ number\ of\ lives\r\n\ to\ reset\ the\ position\ of\ the\ cat\ or\ show\ the\ game\ over\ onject\ based\ on\ the\ number\ of\ lives\r\n
 comment4.params=
 comment4.target=void\ prepare()
 comment4.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n

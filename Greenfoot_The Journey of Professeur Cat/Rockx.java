@@ -10,7 +10,7 @@ public class Rockx extends Actor
 { 
     public static int speed = 3;
     /**
-     * Act - do whatever the Rock wants to do. This method is called whenever
+     * checks if the rocks are at the edge, if so, make the rocks move to the oposite direction
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
@@ -18,7 +18,9 @@ public class Rockx extends Actor
         if (isAtEdge()) 
             speed *= -1;
     }
-    
+    /**
+     * this method  is created to return the speed of the rocks
+     */
     public static int getSpeed() {
     return speed;
     }

@@ -22,7 +22,8 @@ public class Cat extends MutualCat
         isDown = false;
     }    
     /**
-     * Act - do whatever the Cat wants to do. This method is called whenever
+     * to make the cat behave according to the game
+     * interaction conditions between objects
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
