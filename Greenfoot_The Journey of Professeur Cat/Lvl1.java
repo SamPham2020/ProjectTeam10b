@@ -2,8 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class MyWorld here.
- * 
- * @author (your name) 
+ * the class of the first level of the game
+ * @author Krikor Astour 
  * @version (a version number or a date)
  */
 public class Lvl1 extends MutualWorld
