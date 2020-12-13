@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Entrance2 here.
+ * the class of the enteracne of the cave
  * 
- * @author (your name) 
+ * @author Krikor Astour 
  * @version (a version number or a date)
  */
 public class Entrance2 extends Actor
