@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MutualCat
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MutualCat\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Mutual\ Cat's\ functions\ for\ all\ Cats\ \r\n\ \r\n\ @author\ Hong\ Hien\ Pham\r\n\ @version\ 12/14/2020\r\n
 comment1.params=
 comment1.target=MutualCat()
 comment2.params=

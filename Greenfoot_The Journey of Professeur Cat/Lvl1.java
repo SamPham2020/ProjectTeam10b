@@ -20,20 +20,7 @@ public class Lvl1 extends MutualWorld
     }
     
      public void act() {
-        //int timer = 0;
-        //while(timer % 2 == 0) { 
-        //    wavesSound.play();
-        //    timer++;
-        //}
-        wavesSound.play();
-        
-        //For GamePlay's presentation only (will be remove after)
-        if (Greenfoot.isKeyDown("r")) {
-            Greenfoot.setWorld(new Lvl1()); 
-            score = 0;
-            lifeNum = 3;
-        }
-            
+        wavesSound.play();    
     }    
     /**
      * to check and update the number of lives

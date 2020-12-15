@@ -37,7 +37,6 @@ public class MutualWorld extends World
             addObject(new House(), 1450, 50);
     }
     
-    //need to make mutual method to avoid repeating
     public void loseLife(int life) {        
         if (lifeNum > 0) {
            loseSound.play();
@@ -83,7 +82,7 @@ public class MutualWorld extends World
      * prepare for initial world
      */
     private void prepare() {
-        //avoid hearts' position drop
+        //avoid hearts' icons position drop in the next level if 2 lives
         if (lifeNum != 2) {
             for (int i = 0; i < lifeNum; i++) {
                 addObject(new Heart(), 1480, 494 - i * 40);            
@@ -94,8 +93,7 @@ public class MutualWorld extends World
                 addObject(new Heart(), 1480, 494 - (i + 1) * 40);            
             }        
         }
-        
-        
+               
         Button home = new Button(4, 20);
         addObject(home,1470, 567);  
         

@@ -20,18 +20,8 @@ public class Lvl2 extends MutualWorld
     }
     
     public void act() {
-        /*sorry, this is kinda loud, so I[Sam] lowered volume,
-         * you[Shawn] can delete/modify this line if you want 
-         * or we can make the audio button/option for user later
-         */ 
         caveSound.setVolume(50);
-        caveSound.play();      
-        
-        //For GamePlay's presentation only (will be remove after)
-        if (Greenfoot.isKeyDown("r")) {
-            Greenfoot.setWorld(new Lvl2()); 
-            lifeNum = 3;
-        }        
+        caveSound.play();              
     }    
 
     public void loseLife(int life) {        

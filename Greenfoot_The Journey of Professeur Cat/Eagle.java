@@ -17,7 +17,6 @@ public class Eagle extends Actor
     {
        turnTowards(Cat3.getCat3XPos(), Cat3.getCat3YPos());
        move(2);
-       if (getX() < 1500)
-            turn(180);
+       turn(180);
     }    
 }

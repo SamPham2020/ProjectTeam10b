@@ -22,6 +22,6 @@ public class Rockx extends Actor
      * this method  is created to return the speed of the rocks
      */
     public static int getSpeed() {
-    return speed;
+        return speed;
     }
 }

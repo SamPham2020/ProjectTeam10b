@@ -17,10 +17,11 @@ public class Button extends Actor
      * Default constructor = start button at normal size
      */
     public Button() {
+        int startFunctionNum = 1;
         button1 = new GreenfootImage("start.png");
         button2 = new GreenfootImage("start2.png");        
         setImage(button1);
-        this.num = 1;
+        this.num = startFunctionNum; 
     }
     
     /**

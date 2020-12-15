@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Rock here.
+ * Rock 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham
+ * @version 12/14/2020
  */
 public class Rock extends Obstacles
 {
@@ -14,7 +14,7 @@ public class Rock extends Obstacles
      */
     public void act() 
     {
-        movement(3);
+        movement(2);
         if (isAtEdge()) {
             getWorld().removeObject(this); 
         }          

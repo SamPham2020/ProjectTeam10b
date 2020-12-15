@@ -25,19 +25,15 @@ public class Lvl3 extends MutualWorld
     public void act() {
         addObstacles();   
         carSound.play(); 
-        
-        //For GamePlay's presentation only (will be remove after)
-        if (Greenfoot.isKeyDown("r")) {
-            Greenfoot.setWorld(new Lvl3()); 
-            lifeNum = 3;
-        }        
+        train.setVolume(50);
     }    
         
     /**
      * Add obstacles 
      */
     public void addObstacles() {
-        setPaintOrder(Instruction.class, GameOverLose.class, Eagle.class, Bridge.class, Flag.class, Cat3.class, Key.class);               
+        setPaintOrder(Instruction.class, GameOverLose.class, Eagle.class, Bridge.class, Flag.class, Cat3.class, Key.class);         
+        //When eagle appears
         if (timer == 0 && lifeNum > 0) {
             addObject(new Eagle(), 1500, 0);
             eagle.play();
@@ -45,8 +41,9 @@ public class Lvl3 extends MutualWorld
         }
         else 
             timer--;
+            
         if (counter == 25) {         
-            if (Greenfoot.getRandomNumber(100) < 7) {  
+            if (Greenfoot.getRandomNumber(100) < 3) {  
                 addObject(new Rock(), 1350, 0);
                 addObject(new Rock(), 520, 0);
                 addObject(new Rock(), 590, 0);                
@@ -91,10 +88,9 @@ public class Lvl3 extends MutualWorld
 
         for (int i = 0; i < 3; i++) {
             addObject(new Road(), 750 + 200 * i, 300);
-            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(20), Greenfoot.getRandomNumber(80) + 50);    
-            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(80) + 190);            
-            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(20) + 340);   
-            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(20), Greenfoot.getRandomNumber(80) + 460);
+            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(20), Greenfoot.getRandomNumber(80) + 50);             
+            addObject(new Car(), 720 + 200 * i, Greenfoot.getRandomNumber(20) + 250);   
+            addObject(new Car(), 720 + 200 * i + Greenfoot.getRandomNumber(20), Greenfoot.getRandomNumber(80) + 450);
             addObject(new Bridge(0), 750 + 200 * i, 25);
         }
  
@@ -107,7 +103,7 @@ public class Lvl3 extends MutualWorld
         addObject(cat,41,296);
 
         for (int i = 0; i < 3; i++) {
-            addObject(new Key(), Greenfoot.getRandomNumber(300) + 500 * i + 100, Greenfoot.getRandomNumber(280) + 100);   
+            addObject(new Key(), Greenfoot.getRandomNumber(300) + 500 * i + 100, Greenfoot.getRandomNumber(250) + 100);   
         }  
 
         Flag flag = new Flag();

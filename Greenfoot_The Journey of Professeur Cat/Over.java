@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Over here.
+ * Last Scene
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham
+ * @version 12/14/2020
  */
 public class Over extends World
 {
@@ -19,7 +19,9 @@ public class Over extends World
         prepare();
     }
     public void prepare() {
+        // Shows Total Score
         getBackground().drawImage(score, 350,200);
+        
         Button credit = new Button(2, -50);
         addObject(credit, 1150, 150);
    

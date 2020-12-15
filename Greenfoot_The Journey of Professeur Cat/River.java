@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class River here.
+ * River
  * 
- * @author (your name) 
+ * @author Hong Hien Pham
  * @version (a version number or a date)
  */
 public class River extends Actor

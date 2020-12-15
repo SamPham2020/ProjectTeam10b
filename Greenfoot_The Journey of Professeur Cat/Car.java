@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Car here.
+ * Car 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham
+ * @version 12/14/2020
  */
 public class Car extends Obstacles
 {
@@ -14,9 +14,11 @@ public class Car extends Obstacles
      */
     public void act() 
     {
-        movement(-3);
+        movement(-1);
+        
         if(getY() == 50) {
             getWorld().addObject(new Car(), getX(), 600);
+            getWorld().removeObject(this);
         }
     }    
 }

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cat3 here.
+ * Cat of level 3 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham
+ * @version 12/14/2020
  */
 public class Cat3 extends MutualCat
 {
@@ -22,19 +22,11 @@ public class Cat3 extends MutualCat
         movement();
         encounter();        
     }    
-    
-    public static int getCat3XPos() {
-        return x;
-    }
-
-    public static int getCat3YPos() {
-        return y;
-    }
-    
+        
     /**
      * Interaction between cat3 and other objects and the consequences of lv3
      */
-    public void encounter() {
+    private void encounter() {
         Lvl3 myworld = (Lvl3) getWorld();     
         //if touch train or car 
         if (isTouching(Car.class) || isTouching(Train.class)) {
@@ -50,10 +42,11 @@ public class Cat3 extends MutualCat
             speed = 0;        
         }
         
+        int rockSpeed = 2;
         // if touch river
         if (getX() > 1320 && getX() < 1390  || getX() > 500 && getX() < 605) {
             if (isTouching(Rock.class) && speed != 0) {
-                setLocation(getX(), getY() + 3);
+                setLocation(getX(), getY() + rockSpeed);
                 getWorld().setPaintOrder(MutualCat.class);
             }
             else
@@ -88,5 +81,13 @@ public class Cat3 extends MutualCat
             else
                 counter++;
         }     
+    }   
+    
+    public static int getCat3XPos() {
+        return x;
+    }
+
+    public static int getCat3YPos() {
+        return y;
     }    
 }

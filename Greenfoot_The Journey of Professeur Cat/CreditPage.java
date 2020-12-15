@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CreditPage here.
+ * CreditPage 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Hong Hien Pham
+ * @version 12/14/2020
  */
 public class CreditPage extends Actor
 {

@@ -28,11 +28,6 @@ public class Cat extends MutualCat
      */
     public void act() {
         movement();
-        if (isMove()) {
-            switchImage();
-        }
-        else
-            setImage(stand);
         if (isTouching(Island1.class)) {
             setLocation(getX(), getY());
             getWorld().setPaintOrder(Instruction.class, GameOverLose.class, Star.class, Cat.class);

@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Bat here.
  * 
- * @author (your name) 
+ * @author Shawn
  * @version (a version number or a date)
  */
 public class Bat extends Actor

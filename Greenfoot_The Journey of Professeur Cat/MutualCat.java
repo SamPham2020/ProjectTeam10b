@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
-* Write a description of class MutualCat here.
+* Mutual Cat's functions for all Cats 
 * 
-* @author (your name) 
-* @version (a version number or a date)
+* @author Hong Hien Pham
+* @version 12/14/2020
 */
 public class MutualCat extends Actor
 {
@@ -76,7 +76,6 @@ public class MutualCat extends Actor
             isDown = true;
         }
         else if (Greenfoot.isKeyDown("space")) {
-            //setLocation(getX() + speed * 2, getY());  
             move(speed * 2);
             isDown = true;
         }

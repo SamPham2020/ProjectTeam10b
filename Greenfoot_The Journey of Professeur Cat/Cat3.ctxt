@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.target=Cat3
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Cat3\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Cat\ of\ level\ 3\ \r\n\ \r\n\ @author\ Hong\ Hien\ Pham\r\n\ @version\ 12/14/2020\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Cat3\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
-comment2.target=int\ getCat3XPos()
+comment2.target=void\ encounter()
+comment2.text=\r\n\ Interaction\ between\ cat3\ and\ other\ objects\ and\ the\ consequences\ of\ lv3\r\n
 comment3.params=
-comment3.target=int\ getCat3YPos()
+comment3.target=int\ getCat3XPos()
 comment4.params=
-comment4.target=void\ encounter()
-comment4.text=\r\n\ Interaction\ between\ cat3\ and\ other\ objects\ and\ the\ consequences\ of\ lv3\r\n
+comment4.target=int\ getCat3YPos()
 numComments=5
